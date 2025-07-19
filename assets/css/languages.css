@@ -1,0 +1,965 @@
+/* دعم اللغتين العربية والإنجليزية */
+
+/* اتجاه النص للعربية */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .ic-navbar-container {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .ic-navbar-collapse ul {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .gap-2 > * + * {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .gap-4 > * + * {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .gap-5 > * + * {
+  margin-right: 1.25rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .gap-6 > * + * {
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+
+/* اتجاه النص للإنجليزية */
+[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+[dir="ltr"] .ic-navbar-container {
+  flex-direction: row;
+}
+
+[dir="ltr"] .ic-navbar-collapse ul {
+  flex-direction: row;
+}
+
+[dir="ltr"] .flex {
+  flex-direction: row;
+}
+
+/* تحسينات للزر */
+#languageToggle {
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+#languageToggle:hover {
+  transform: scale(1.1);
+}
+
+/* تحسينات للتنقل */
+[dir="rtl"] .ic-navbar-toggler {
+  left: auto;
+  right: 1rem;
+}
+
+[dir="ltr"] .ic-navbar-toggler {
+  right: auto;
+  left: 1rem;
+}
+
+/* تحسينات للقوائم */
+[dir="rtl"] .portfolio-menu button {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+[dir="ltr"] .portfolio-menu button {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* تحسينات للفريق */
+[dir="rtl"] .team-member .social-links {
+  flex-direction: row-reverse;
+}
+
+[dir="ltr"] .team-member .social-links {
+  flex-direction: row;
+}
+
+/* أيقونات التواصل تبقى في اليسار دائماً */
+.social-links {
+  direction: ltr !important;
+  flex-direction: row !important;
+}
+
+[dir="rtl"] .social-links {
+  direction: ltr !important;
+  flex-direction: row !important;
+}
+
+[dir="ltr"] .social-links {
+  direction: ltr !important;
+  flex-direction: row !important;
+}
+
+/* أيقونات Footer تبقى في المنتصف دائماً */
+.footer-social-links {
+  direction: ltr !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+[dir="rtl"] .footer-social-links {
+  direction: ltr !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+[dir="ltr"] .footer-social-links {
+  direction: ltr !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* نص Footer يبقى في المنتصف */
+[data-translate="footer-description"] {
+  text-align: center !important;
+}
+
+/* العناوين الرئيسية في Portfolio تبقى في المنتصف */
+[data-translate="portfolio-title"],
+[data-translate="portfolio-heading"],
+[data-translate="portfolio-subtitle"] {
+  text-align: center !important;
+}
+
+/* أزرار التصفية في Portfolio تبقى في المنتصف */
+.portfolio-menu {
+  text-align: center !important;
+}
+
+.portfolio-menu button {
+  text-align: center !important;
+}
+
+/* العناوين الرئيسية في Team تبقى في المنتصف */
+[data-translate="team-title"],
+[data-translate="team-heading"],
+[data-translate="team-subtitle"] {
+  text-align: center !important;
+}
+
+/* أسماء الفريق تبقى في المنتصف */
+[data-translate*="team-member"] {
+  text-align: center !important;
+}
+
+/* قسم Portfolio بالكامل يبقى في المنتصف */
+#portfolio .scroll-revealed {
+  text-align: center !important;
+}
+
+/* قسم Team بالكامل يبقى في المنتصف */
+#team .scroll-revealed {
+  text-align: center !important;
+}
+
+/* تحسينات للاتصال */
+[dir="rtl"] .contact-card {
+  text-align: right;
+}
+
+[dir="ltr"] .contact-card {
+  text-align: left;
+}
+
+/* تحسينات عامة */
+[dir="rtl"] .text-center {
+  text-align: center !important;
+}
+
+[dir="ltr"] .text-center {
+  text-align: center !important;
+}
+
+/* تحسينات للخدمات */
+[dir="rtl"] .service-card {
+  text-align: right;
+}
+
+[dir="ltr"] .service-card {
+  text-align: left;
+}
+
+/* تحسينات للأسئلة الشائعة */
+[dir="rtl"] .faq-item {
+  text-align: right;
+}
+
+[dir="ltr"] .faq-item {
+  text-align: left;
+}
+
+/* تحسينات للعناوين */
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+  text-align: right;
+}
+
+[dir="ltr"] h1, [dir="ltr"] h2, [dir="ltr"] h3, [dir="ltr"] h4, [dir="ltr"] h5, [dir="ltr"] h6 {
+  text-align: left;
+}
+
+/* العناوين الرئيسية في Hero تبقى في المنتصف دائماً */
+[data-translate="hero-title"],
+[data-translate="hero-subtitle"] {
+  text-align: center !important;
+}
+
+/* قسم Hero بالكامل يبقى في المنتصف */
+#home .scroll-revealed {
+  text-align: center !important;
+}
+
+#home h1,
+#home p {
+  text-align: center !important;
+}
+
+/* ضمان أن العناوين الرئيسية تبقى في المنتصف */
+.hero-section h1,
+.hero-section p,
+#home h1,
+#home p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* تحسينات إضافية للعناوين الرئيسية */
+[data-translate="hero-title"] {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+[data-translate="hero-subtitle"] {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* تحسينات للفقرات */
+[dir="rtl"] p {
+  text-align: right;
+}
+
+[dir="ltr"] p {
+  text-align: left;
+}
+
+/* تحسينات للأزرار */
+[dir="rtl"] .btn {
+  text-align: center;
+}
+
+[dir="ltr"] .btn {
+  text-align: center;
+}
+
+/* تحسينات للقوائم */
+[dir="rtl"] ul, [dir="rtl"] ol {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+[dir="ltr"] ul, [dir="ltr"] ol {
+  padding-left: 1.5rem;
+  padding-right: 0;
+}
+
+/* تحسينات للروابط */
+[dir="rtl"] a {
+  text-align: right;
+}
+
+[dir="ltr"] a {
+  text-align: left;
+}
+
+/* تحسينات للصور */
+[dir="rtl"] img {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+[dir="ltr"] img {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* تحسينات للبطاقات */
+[dir="rtl"] .card {
+  text-align: right;
+}
+
+[dir="ltr"] .card {
+  text-align: left;
+}
+
+/* تحسينات للجداول */
+[dir="rtl"] table {
+  direction: rtl;
+}
+
+[dir="ltr"] table {
+  direction: ltr;
+}
+
+/* تحسينات للنماذج */
+[dir="rtl"] input, [dir="rtl"] textarea, [dir="rtl"] select {
+  text-align: right;
+}
+
+[dir="ltr"] input, [dir="ltr"] textarea, [dir="ltr"] select {
+  text-align: left;
+}
+
+/* تحسينات للتنبيهات */
+[dir="rtl"] .alert {
+  text-align: right;
+}
+
+[dir="ltr"] .alert {
+  text-align: left;
+}
+
+/* تحسينات للشريط الجانبي */
+[dir="rtl"] .sidebar {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .sidebar {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+
+[dir="ltr"] .dropdown-menu {
+  left: 0;
+  right: auto;
+  text-align: left;
+}
+
+/* تحسينات للتنقل في الصفحة */
+[dir="rtl"] .pagination {
+  flex-direction: row-reverse;
+}
+
+[dir="ltr"] .pagination {
+  flex-direction: row;
+}
+
+/* تحسينات للشريط العلوي */
+[dir="rtl"] .navbar-nav {
+  flex-direction: row-reverse;
+}
+
+[dir="ltr"] .navbar-nav {
+  flex-direction: row;
+}
+
+/* تحسينات للشعار */
+[dir="rtl"] .navbar-brand {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+[dir="ltr"] .navbar-brand {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+/* تحسينات للبحث */
+[dir="rtl"] .search-box {
+  text-align: right;
+}
+
+[dir="ltr"] .search-box {
+  text-align: left;
+}
+
+/* تحسينات للتنبيهات */
+[dir="rtl"] .toast {
+  text-align: right;
+}
+
+[dir="ltr"] .toast {
+  text-align: left;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-toggle::after {
+  margin-right: 0.255em;
+  margin-left: 0;
+}
+
+[dir="ltr"] .dropdown-toggle::after {
+  margin-left: 0.255em;
+  margin-right: 0;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-item {
+  text-align: right;
+}
+
+[dir="ltr"] .dropdown-item {
+  text-align: left;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-divider {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+[dir="ltr"] .dropdown-divider {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-header {
+  text-align: right;
+}
+
+[dir="ltr"] .dropdown-header {
+  text-align: left;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-text {
+  text-align: right;
+}
+
+[dir="ltr"] .dropdown-text {
+  text-align: left;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-sm {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .dropdown-menu-sm {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-lg {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .dropdown-menu-lg {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-xl {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .dropdown-menu-xl {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-xxl {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .dropdown-menu-xxl {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-centered {
+  right: 50%;
+  left: auto;
+  transform: translateX(50%);
+}
+
+[dir="ltr"] .dropdown-menu-centered {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .dropdown-menu-right {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+
+[dir="ltr"] .dropdown-menu-left {
+  right: 0;
+  left: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-sm-right {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .dropdown-menu-sm-right {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-sm-left {
+  left: 0;
+  right: auto;
+}
+
+[dir="ltr"] .dropdown-menu-sm-left {
+  right: 0;
+  left: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-md-right {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .dropdown-menu-md-right {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-md-left {
+  left: 0;
+  right: auto;
+}
+
+[dir="ltr"] .dropdown-menu-md-left {
+  right: 0;
+  left: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-lg-right {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .dropdown-menu-lg-right {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-lg-left {
+  left: 0;
+  right: auto;
+}
+
+[dir="ltr"] .dropdown-menu-lg-left {
+  right: 0;
+  left: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-xl-right {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .dropdown-menu-xl-right {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-xl-left {
+  left: 0;
+  right: auto;
+}
+
+[dir="ltr"] .dropdown-menu-xl-left {
+  right: 0;
+  left: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-xxl-right {
+  right: 0;
+  left: auto;
+}
+
+[dir="ltr"] .dropdown-menu-xxl-right {
+  left: 0;
+  right: auto;
+}
+
+/* تحسينات للقوائم المنسدلة */
+[dir="rtl"] .dropdown-menu-xxl-left {
+  left: 0;
+  right: auto;
+}
+
+[dir="ltr"] .dropdown-menu-xxl-left {
+  right: 0;
+  left: auto;
+} 
+
+/* عناوين FAQ والنصوص المهمة في المنتصف */
+[data-translate^="faq-title"],
+[data-translate^="faq-heading"],
+[data-translate^="faq-subtitle"],
+[data-translate^="faq-q"],
+[data-translate^="faq-a"] {
+  text-align: center !important;
+}
+
+/* عناوين التواصل والنصوص المهمة في المنتصف */
+[data-translate^="contact-title"],
+[data-translate^="contact-heading"],
+[data-translate^="contact-subtitle"] {
+  text-align: center !important;
+}
+
+/* عناوين قسم الخدمات والنصوص المهمة في المنتصف */
+[data-translate^="services-title"],
+[data-translate^="services-heading"],
+[data-translate^="services-subtitle"],
+[data-translate^="service-"] {
+  text-align: center !important;
+}
+
+#services .scroll-revealed {
+  text-align: center !important;
+}
+
+/* تمركز قسم الخدمات بالكامل */
+#services {
+  text-align: center !important;
+}
+
+#services .container {
+  text-align: center !important;
+}
+
+#services .row {
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+#services .col-12,
+#services .sm\:col-6,
+#services .lg\:col-4 {
+  text-align: center !important;
+}
+
+#services .group {
+  text-align: center !important;
+}
+
+#services .w-full {
+  text-align: center !important;
+}
+
+#services h4,
+#services p {
+  text-align: center !important;
+}
+
+/* الفوتر بالكامل في المنتصف */
+footer, .footer-social-links, [data-translate="footer-description"], [data-translate="footer-copyright"] {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.footer-social-links {
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* إصلاح الفوتر ليكون زي الصورة */
+footer .container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+footer .flex {
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+footer p {
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+footer .footer-social-links {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 1rem auto !important;
+  gap: 1.5rem !important;
+}
+
+footer .text-center {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* إصلاح أقوى للفوتر */
+footer .py-8 .container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+footer .py-8 .flex {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+footer .py-8 .mb-6 {
+  text-align: center !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+footer .py-8 .text-center {
+  text-align: center !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* إصلاح النص والأيقونات وحقوق النشر */
+footer [data-translate="footer-description"] {
+  text-align: center !important;
+  display: block !important;
+  margin: 0 auto 1.5rem auto !important;
+}
+
+footer .footer-social-links {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto 1.5rem auto !important;
+  gap: 1.5rem !important;
+  flex-wrap: nowrap !important;
+  flex-flow: row nowrap !important;
+}
+
+/* إصلاح علامة الكويرايت لتكون في المنتصف */
+[data-translate="footer-copyright"] {
+  text-align: center !important;
+  display: block !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  direction: ltr !important;
+}
+
+/* إصلاح علامة حقوق النشر حسب اللغة - لكن تبقى في المنتصف */
+[lang="ar"] [data-translate="footer-copyright"] {
+  text-align: center !important;
+  direction: rtl !important;
+}
+
+[lang="en"] [data-translate="footer-copyright"] {
+  text-align: center !important;
+  direction: ltr !important;
+}
+
+/* إصلاح أقوى للأيقونات */
+.footer-social-links {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+}
+
+.footer-social-links a {
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
+
+/* إصلاح أقوى للأيقونات في الفوتر */
+footer .footer-social-links {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  width: auto !important;
+  min-width: fit-content !important;
+}
+
+footer .footer-social-links a {
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* إصلاح إضافي للأيقونات */
+.footer-social-links.flex {
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
+.footer-social-links.flex.items-center {
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
+/* إصلاح استايل عناوين الفوتر */
+[data-translate="footer-solutions"],
+[data-translate="footer-support"] {
+  text-align: center !important;
+  font-weight: normal !important;
+  font-size: 1rem !important;
+  margin-bottom: 1rem !important;
+} 
+
+/* إصلاح أقوى لعمودي الحلول ويدعم */
+.row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin: 0 -2rem !important;
+  clear: both !important;
+  justify-content: space-between !important;
+}
+
+.row::after {
+  content: "" !important;
+  display: table !important;
+  clear: both !important;
+}
+
+.col-6.lg\:col-2 {
+  display: block !important;
+  width: 45% !important;
+  float: left !important;
+  clear: none !important;
+  margin: 0 !important;
+  padding: 0 2rem !important;
+  box-sizing: border-box !important;
+}
+
+.col-6.lg\:col-2:first-child {
+  text-align: right !important;
+  padding-right: 3rem !important;
+}
+
+.col-6.lg\:col-2:last-child {
+  text-align: left !important;
+  padding-left: 3rem !important;
+  min-width: 250px !important;
+}
+
+/* إصلاح النص داخل الأعمدة */
+.col-6.lg\:col-2 h4 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1.5rem !important;
+  color: white !important;
+  text-align: inherit !important;
+}
+
+.col-6.lg\:col-2 ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: inherit !important;
+}
+
+.col-6.lg\:col-2 li {
+  margin-bottom: 0.75rem !important;
+  text-align: inherit !important;
+}
+
+.col-6.lg\:col-2 a {
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 1rem !important;
+  text-align: inherit !important;
+  display: block !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  line-height: 1.4 !important;
+}
+
+.col-6.lg\:col-2 a:hover {
+  color: #3d63dd !important;
+} 

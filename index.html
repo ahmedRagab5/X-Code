@@ -100,6 +100,8 @@
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
 
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/languages.css" />
+    <script src="./assets/js/languages.js"></script>
   </head>
   <body>
     <!-- Page loading -->
@@ -164,7 +166,7 @@
                       href="#contact"
                       class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-4 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
                       role="menuitem"
-                      >اتصل بنا</a
+                      data-translate="nav-contact">اتصل بنا</a
                     >
                   </li>
 
@@ -173,7 +175,7 @@
                       href="#team"
                       class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-4 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
                       role="menuitem"
-                      >الفريق</a
+                      data-translate="nav-team">الفريق</a
                     >
                   </li>
 
@@ -182,7 +184,7 @@
                       href="#portfolio"
                       class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-4 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
                       role="menuitem"
-                      >الأعمال</a
+                      data-translate="nav-portfolio">الأعمال</a
                     >
                   </li>
 
@@ -191,7 +193,7 @@
                       href="#services"
                       class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-4 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
                       role="menuitem"
-                      >الخدمات</a
+                      data-translate="nav-services">الخدمات</a
                     >
                   </li>
 
@@ -200,14 +202,14 @@
                       href="#home"
                       class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-4 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 active"
                       role="menuitem"
-                      >الصفحة الرئيسية</a
+                      data-translate="nav-home">الصفحة الرئيسية</a
                     >
                   </li>
                 </ul>
               </nav>
             </div>
           </div>
-          <div class="flex items-center justify-start pr-4 lg:pr-8 mr-4">
+          <div class="flex items-center justify-start pr-4 lg:pr-8 mr-4 gap-2">
             <button
               type="button"
               class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 text-[20px]/none"
@@ -215,6 +217,14 @@
               data-web-trigger="web-theme"
             >
               <i class="lni lni-moon"></i>
+            </button>
+            <button
+              type="button"
+              id="languageToggle"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 text-[16px]/none font-semibold"
+              aria-label="Toggle language"
+            >
+              <span id="currentLang">ع</span>
             </button>
           </div>
           <!-- اللوجو - أقصى اليمين -->
@@ -227,20 +237,22 @@
       <!-- Hero section -->
       <section
         id="home"
-        class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]"
+        class="hero-section relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]"
       >
         <div class="container">
           <div class="-mx-5 flex flex-wrap items-center">
             <div class="w-full px-5">
               <div class="scroll-revealed mx-auto max-w-[780px] text-center">
                 <h1
-                  class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight"
+                  class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight text-center"
+                  data-translate="hero-title"
                 >
                 X CODE
                 </h1>
 
                 <p
-                  class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal"
+                  class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal text-center"
+                  data-translate="hero-subtitle"
                 >
                 هنبرمج فكرتك
                 </p>
@@ -270,10 +282,10 @@
 
             <div class="w-full">
               <div class="scroll-revealed">
-                <h6 class="mb-2 block text-lg font-semibold text-primary">
+                <h6 class="mb-2 block text-lg font-semibold text-primary" data-translate="about-title">
                   نبذة عن الشركة
                 </h6>
-                <h2 class="mb-6">
+                <h2 class="mb-6" data-translate="about-heading">
                   نقدم لك حلول تقنية متكاملة تساعد اي من اصحاب الشركات او المشاريع 
                 </h2>
               </div>
@@ -351,11 +363,11 @@
       <section id="services" class="section-area">
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">
+            <h6 class="mb-2 block text-lg font-semibold text-primary" data-translate="services-title">
               الخدمات
             </h6>
-            <h2 class="mb-6">أفضل خدماتنا</h2>
-            <p>
+            <h2 class="mb-6" data-translate="services-heading">أفضل خدماتنا</h2>
+            <p data-translate="services-subtitle">
               خدمات متكاملة، حلول ذكية، ونتايج تفرق، اختر اللي يناسبك وابدأ بقوة.
             </p>
           </div>
@@ -366,13 +378,53 @@
                 <div
                   class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
                 >
-                  <i class="lni lni-capsule"></i>
+                  <i class="lni lni-laptop"></i>
                 </div>
                 <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
+                  <h4 class="text-[1.25rem]/tight font-semibold mb-5" data-translate="service-desktop-title">
+                    تطبيقات ديسكتوب احترافية
+                  </h4>
+                  <p data-translate="service-desktop-desc">
+                    تطبيقات سطح المكتب المتقدمة لنظامي Windows و macOS
+                    واجهات مستخدم عصرية وسهلة الاستخدام
+                    حلول مخصصة لإدارة الأعمال والشركات
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+              <div class="group hover:-translate-y-1">
+                <div
+                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
+                >
+                  <i class="lni lni-brush"></i>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-[1.25rem]/tight font-semibold mb-5" data-translate="service-graphic-title">
+                    تصميم الجرافيك والهوية البصرية
+                  </h4>
+                  <p data-translate="service-graphic-desc">
+                    تصميم شعارات وهوية بصرية احترافية
+                    تصميم مواد دعائية وطباعية
+                    تصميم واجهات المستخدم UI/UX
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+              <div class="group hover:-translate-y-1">
+                <div
+                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
+                >
+                  <i class="lni lni-cart"></i>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-[1.25rem]/tight font-semibold mb-5" data-translate="service-ecommerce-title">
                     إنشاء متاجر الكترونية جاهزة للعمل فورًا
                   </h4>
-                  <p>
+                  <p data-translate="service-ecommerce-desc">
                     تصميم احترافي 
                     نظام طلب و دفع الكترونيةإدارة كاملة للمنتجات و الطلبات
                     لوحة تحكم لصاحب المتجر يقدر يدير منها كل حاجه بسهولة
@@ -386,13 +438,13 @@
                 <div
                   class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
                 >
-                  <i class="lni lni-tailwindcss"></i>
+                  <i class="lni lni-mobile"></i>
                 </div>
                 <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
+                  <h4 class="text-[1.25rem]/tight font-semibold mb-5" data-translate="service-mobile-title">
                     تطبيقات موبايل مخصصة(ios/Android)
                   </h4>
-                  <p>
+                  <p data-translate="service-mobile-desc">
                     تطبيقات سريعة وسهلة الاستخدم
                     متزامنة مع المتجر ولوحة التحكم
                     اشعارات لحظية للعميل
@@ -406,16 +458,36 @@
                 <div
                   class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
                 >
-                  <i class="lni lni-gift"></i>
+                  <i class="lni lni-website"></i>
                 </div>
                 <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
+                  <h4 class="text-[1.25rem]/tight font-semibold mb-5" data-translate="service-web-title">
                     برمجة مواقع الكترونية حسب الطلب 
                   </h4>
-                  <p>
+                  <p data-translate="service-web-desc">
                     أي نظام خاص:إدارة عيادات- حجز مواعيد- منصات تعليمية- إدارة موظفين..إلخ
                     تصمبم مخصص حسب طبيعة الشروع 
                     تجربة مستخدم سهلة واحترافية
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+              <div class="group hover:-translate-y-1">
+                <div
+                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
+                >
+                  <i class="lni lni-cog"></i>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-[1.25rem]/tight font-semibold mb-5" data-translate="service-business-title">
+                    أنظمة إدارة الأعمال المتكاملة
+                  </h4>
+                  <p data-translate="service-business-desc">
+                    أنظمة إدارة المخزون والمبيعات
+                    أنظمة إدارة الموظفين والرواتب
+                    أنظمة المحاسبة والمالية
                   </p>
                 </div>
               </div>
@@ -457,11 +529,11 @@
       <section id="portfolio" class="section-area">
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">
+            <h6 class="mb-2 block text-lg font-semibold text-primary" data-translate="portfolio-title">
              ملف الاعمال
             </h6>
-            <h2 class="mb-6">أعمالنا الأخيرة</h2>
-            <p>
+            <h2 class="mb-6" data-translate="portfolio-heading">أعمالنا الأخيرة</h2>
+            <p data-translate="portfolio-subtitle">
               ملف الاعمال الذي يحتوي على جميع الاعمال التي قمنا بها
             </p>
           </div>
@@ -474,6 +546,7 @@
               type="button"
               class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color active"
               data-filter="all"
+              data-translate="portfolio-all"
             >
               جميع الاعمال
             </button>
@@ -482,6 +555,7 @@
               type="button"
               class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
               data-filter="marketing"
+              data-translate="portfolio-web"
             >
             تطوير المواقع
             </button>
@@ -489,6 +563,7 @@
               type="button"
               class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
               data-filter="planning"
+              data-translate="portfolio-apps"
             >
              تطوير التطبيقات
             </button>
@@ -511,10 +586,11 @@
                     <div class="flex flex-wrap gap-2 p-4">
                       <div class="inline-block relative">
                         <a
-                          href="./assets/img/portfolio/portfolio-1.jpg"
-                          class="portfolio-box text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
+                          href="https://drive.google.com/file/d/1-Bt5fMo0PsLOewhzAT98GLqZNR1UGzVm/view?usp=sharing"
+                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
+                          target="_blank"
                         >
-                          <i class="lni lni-zoom-in"></i>
+                          <i class="lni lni-play"></i>
                         </a>
                       </div>
                     </div>
@@ -525,10 +601,11 @@
                     <a
                       href="javascript:void(0)"
                       class="text-[1.5rem] leading-tight text-inherit"
+                      data-translate="portfolio-graphic-title"
                       >تصميم الجرافيك</a
                     >
                   </h4>
-                  <p>
+                  <p data-translate="portfolio-graphic-desc">
                     نصمم هويتك البصرية بشكل يعبر عنك، من الشعارات و البروفايلات إلي التصاميم الدعائية، بأسلوب إبداعي يجذب الانتباه ويترك أثر.
                   </p>
                 </div>
@@ -551,10 +628,11 @@
                     <div class="flex flex-wrap gap-2 p-4">
                       <div class="inline-block relative">
                         <a
-                          href="./assets/img/portfolio/portfolio-2.jpg"
-                          class="portfolio-box text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
+                          href="https://drive.google.com/file/d/1-Bt5fMo0PsLOewhzAT98GLqZNR1UGzVm/view?usp=sharing"
+                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
+                          target="_blank"
                         >
-                          <i class="lni lni-zoom-in"></i>
+                          <i class="lni lni-play"></i>
                         </a>
                       </div>
                      
@@ -566,10 +644,11 @@
                     <a
                       href="javascript:void(0)"
                       class="text-[1.5rem] leading-tight text-inherit"
+                      data-translate="portfolio-web-title"
                       >تطوير الويب</a
                     >
                   </h4>
-                  <p>
+                  <p data-translate="portfolio-web-desc">
                     بنبني مواقع سريعة، احترافية و متجاوبة علي كل الأجهزة، سواء مواقع تعريفية أو متاجر إلكترونيةأو أنظمة مخصصة لإدارة أعمالك.
                   </p>
                 </div>
@@ -592,10 +671,11 @@
                     <div class="flex flex-wrap gap-2 p-4">
                       <div class="inline-block relative">
                         <a
-                          href="./assets/img/portfolio/portfolio-3.jpg"
-                          class="portfolio-box text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
+                          href="https://drive.google.com/file/d/1-Bt5fMo0PsLOewhzAT98GLqZNR1UGzVm/view?usp=sharing"
+                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
+                          target="_blank"
                         >
-                          <i class="lni lni-zoom-in"></i>
+                          <i class="lni lni-play"></i>
                         </a>
                       </div>
                      
@@ -607,10 +687,11 @@
                     <a
                       href="javascript:void(0)"
                       class="text-[1.5rem] leading-tight text-inherit"
+                      data-translate="portfolio-app-title"
                       >تطوير التطبيقات</a
                     >
                   </h4>
-                  <p>
+                  <p data-translate="portfolio-app-desc">
                   نطور تطبيقات موبايل ذكية وسهلة الإستخدام، سواء لأندرويد أو ios،تناسب احتياجات مشروعك وتقدم تجربة مستخدم مثالية.
                   </p>
                 </div>
@@ -630,16 +711,17 @@
       >
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto">
-            <h2 class="mb-8 text-inherit">
+            <h2 class="mb-8 text-inherit" data-translate="cta-heading">
               نحن نحب أن نقدم حلولاً مثالية لعملك 
             </h2>
-            <p>
+            <p data-translate="cta-text">
               نستخدم أحدث الأدوات و التقنيات لبناء حلول تساعدك تحقق أهدافك وتنمي شغلك.
             </p>
             <a
               href="#contact"
               class="inline-block px-5 py-3 rounded-md mt-11 bg-green-400 text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white"
               role="button"
+              data-translate="cta-button"
             >تواصل معنا وابدأ الآن</a
             >
           </div>
@@ -650,9 +732,9 @@
       <section id="team" class="section-area">
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">فريق العمل</h6>
-            <h2 class="mb-6">فريقنا الإبداعي</h2>
-            <p>
+            <h6 class="mb-2 block text-lg font-semibold text-primary" data-translate="team-title">فريق العمل</h6>
+            <h2 class="mb-6" data-translate="team-heading">فريقنا الإبداعي</h2>
+            <p data-translate="team-subtitle">
               نؤمن بأن الابداع هو سر التميز، ويقود فريقنا الموهوب نحو الابتكار و الجودة.
             </p>
           </div>
@@ -678,11 +760,13 @@
                 <figcaption class="text-center block">
                   <h4
                     class="mb-1 text-lg font-semibold text-body-light-12 dark:text-body-dark-12"
+                    data-translate="team-member-1-name"
                   >
                     عبدالرحمن عامر
                   </h4>
                   <p
                     class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
+                    data-translate="team-member-1-role"
                   >
                     مطور تطبيقات الموبايل
                   </p>
@@ -733,11 +817,13 @@
                 <figcaption class="text-center block">
                   <h4
                     class="mb-1 text-lg font-semibold text-body-light-12 dark:text-body-dark-12"
+                    data-translate="team-member-2-name"
                   >
                     محمد عماد
                   </h4>
                   <p
                     class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
+                    data-translate="team-member-2-role"
                   >
                     مطور تطبيقات الويب
                   </p>
@@ -788,11 +874,13 @@
                 <figcaption class="text-center block">
                   <h4
                     class="mb-1 text-lg font-semibold text-body-light-12 dark:text-body-dark-12"
+                    data-translate="team-member-3-name"
                   >
                     عبدالله محمود
                   </h4>
                   <p
                     class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
+                    data-translate="team-member-3-role"
                   >
                    مصمم واجهات المستخدم 
                   </p>
@@ -996,9 +1084,9 @@
       <section id="faq" class="section-area relative">
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">FAQ</h6>
-            <h2 class="mb-6">هل لديك أي أسئلة؟ انظر هنا </h2>
-            <p>
+            <h6 class="mb-2 block text-lg font-semibold text-primary" data-translate="faq-title">FAQ</h6>
+            <h2 class="mb-6" data-translate="faq-heading">هل لديك أي أسئلة؟ انظر هنا </h2>
+            <p data-translate="faq-subtitle">
               جمعنا لك أكثر الأسئلة الشائعة، مع إجابات واضحة وسريعة تساعدك تفهم خدماتنا بشكل أفضل.
             </p>
           </div>
@@ -1013,10 +1101,11 @@
               <div class="w-full">
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+                  data-translate="faq-q1"
                 >
                 ؟    X Code ما هي الخدمات التي تقدمها   
                 </h3>
-                <p class="text-body-light-11 dark:text-body-dark-11">
+                <p class="text-body-light-11 dark:text-body-dark-11" data-translate="faq-a1">
           نحن نقدم تصميم وتطوير مواقع الويب، تطبيقات الموبايل، تطبيقات الديسكتوب، ولوحات التحكم الخاصة بالشركات.
                 </p>
               </div>
@@ -1031,10 +1120,11 @@
               <div class="w-full">
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+                  data-translate="faq-q2"
                 >
                   ما المدة المتوقعة لتصميم المشروع؟
                 </h3>
-                <p class="text-body-light-11 dark:text-body-dark-11">
+                <p class="text-body-light-11 dark:text-body-dark-11" data-translate="faq-a2">
                   مدة تنفيذ المشروع تعتمد علي حجم وتعقيد المشروع، لكنها غالبًا بتتراوح بين أسبوعين الي 5 أسابيع
                 </p>
               </div>
@@ -1049,10 +1139,11 @@
               <div class="w-full">
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+                  data-translate="faq-q3"
                 >
                   هل تقدمون دعم فني بعد التسليم؟
                 </h3>
-                <p class="text-body-light-11 dark:text-body-dark-11">
+                <p class="text-body-light-11 dark:text-body-dark-11" data-translate="faq-a3">
                   نعم، نحن نوفر الدعم الفني مجانًا لفترة محددة بعد التسليم، مع إمكانية التعاقد علي باقات صيانة شهرية.
                 </p>
               </div>
@@ -1067,10 +1158,11 @@
               <div class="w-full">
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+                  data-translate="faq-q4"
                 >
                   هل يمكن التعديل علي المشروع بعد تسليمه؟
                 </h3>
-                <p class="text-body-light-11 dark:text-body-dark-11">
+                <p class="text-body-light-11 dark:text-body-dark-11" data-translate="faq-a4">
                   طبعًا،بنوفر عدد معين من التغديلات حسب الباقة، وممكن نعمل اي تعديل إضافي حسب الإتفاق.
                 </p>
               </div>
@@ -1085,10 +1177,11 @@
               <div class="w-full">
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+                  data-translate="faq-q5"
                 >
                 هل يمكنكم تصميم موقع أو تطبيق حسب فكرتي الخاصة؟
               </h3>
-                <p class="text-body-light-11 dark:text-body-dark-11">
+                <p class="text-body-light-11 dark:text-body-dark-11" data-translate="faq-a5">
                   أكيد! بنشتغل على أفكار العملاء من الصفر ونحوّلها لحلول رقمية متكاملة.                </p>
               </div>
             </div>
@@ -1102,11 +1195,12 @@
               <div class="w-full">
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+                  data-translate="faq-q6"
                 >
                 هل أحتاج لدفع مقدم قبل بدء المشروع؟
                 </h3>
-                <p class="text-body-light-11 dark:text-body-dark-11">
-                  نعم، عادة بنطلب دفعة مقدمة لبدء العمل، وتكون نسبة من إجمالي التكلفة .            </p>
+                <p class="text-body-light-11 dark:text-body-dark-11" data-translate="faq-a6">
+                  نعم، عادة بنطلب دفعة مقدمة لبدء العمل، وتكون نسبة من إجمالي التكلفة .            </p>
               </div>
             </div>
 
@@ -1119,11 +1213,12 @@
               <div class="w-full">
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+                  data-translate="faq-q7"
                 >
                 كيف يمكنني بدء التعامل معكم؟
-              </h3>
-                <p class="text-body-light-11 dark:text-body-dark-11">
-                  تقدر تتواصل معنا من خلال صفحة "اتصل بنا" أو واتساب، وهنبدأ معاك بتحديد الفكرة والمتطلبات .                </p>
+                </h3>
+                <p class="text-body-light-11 dark:text-body-dark-11" data-translate="faq-a7">
+                  تقدر تتواصل معنا من خلال صفحة "اتصل بنا" أو واتساب، وهنبدأ معاك بتحديد الفكرة والمتطلبات .                </p>
               </div>
             </div>
 
@@ -1136,11 +1231,12 @@
               <div class="w-full">
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+                  data-translate="faq-q8"
                 >
                 هل تقدمون خدمات SEO (تحسين محركات البحث)؟
                 </h3>
-                <p class="text-body-light-11 dark:text-body-dark-11">
-                  نعم، بنقدّم خدمات تحسين ظهور المواقع في محركات البحث ضمن باقاتنا .                </p>
+                <p class="text-body-light-11 dark:text-body-dark-11" data-translate="faq-a8">
+                  نعم، بنقدّم خدمات تحسين ظهور المواقع في محركات البحث ضمن باقاتنا .                </p>
               </div>
             </div>
 
@@ -1154,11 +1250,12 @@
               <div class="w-full">
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+                  data-translate="faq-q9"
                 >
                 هل تتعاملون مع عملاء خارج مصر؟
                 </h3>
-                <p class="text-body-light-11 dark:text-body-dark-11">
-                  نعم، فريقنا بيشتغل مع عملاء من داخل وخارج مصر عبر الإنترنت بشكل كامل .                </p>
+                <p class="text-body-light-11 dark:text-body-dark-11" data-translate="faq-a9">
+                  نعم، فريقنا بيشتغل مع عملاء من داخل وخارج مصر عبر الإنترنت بشكل كامل .                </p>
               </div>
             </div>
 
@@ -1172,10 +1269,11 @@
               <div class="w-full">
                 <h3
                   class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+                  data-translate="faq-q10"
                 >
                 هل أسعاركم مناسبة للمشاريع الصغيرة؟
                 </h3>
-                <p class="text-body-light-11 dark:text-body-dark-11">
+                <p class="text-body-light-11 dark:text-body-dark-11" data-translate="faq-a10">
                   بنقدّم باقات مرنة تناسب كل الاحتياجات، من مشاريع ناشئة لحد شركات كبيرة .                </p>
               </div>
             </div>
@@ -2028,14 +2126,14 @@
 
       <!-- Contact section -->
    <!-- Contact section -->
-<section id="contact" class="section-area">
+<section id="contact" class="section-area relative">
   <div class="container">
     <!-- Section Title -->
     <div class="text-center max-w-[550px] mx-auto mb-12">
-      <h6 class="mb-2 block text-lg font-semibold text-primary">تواصل معنا </h6>
-      <h2 class="mb-3">جاهز للبدء</h2>
-      <p>
-       مشرروعك يستاهل بداية قوية، خلينا نبدأها سوا!
+      <h6 class="mb-2 block text-lg font-semibold text-primary" data-translate="contact-title">تواصل معنا</h6>
+      <h2 class="mb-6" data-translate="contact-heading">معلومات التواصل</h2>
+      <p data-translate="contact-subtitle">
+        يمكنك التواصل معنا عبر الوسائل التالية أو ملء النموذج وسيتم الرد عليك في أقرب وقت.
       </p>
     </div>
 
@@ -2052,21 +2150,21 @@
             ></i>
           </div>
           <div>
-            <h4 class="text-[1.25rem] text-primary mb-3">معلومات الإتصال</h4>
-            <div class="flex items-center justify-center gap-6">
-              <a href="https://wa.me/201093943185" target="_blank" class="text-green-500 hover:text-green-600 text-3xl transition-colors duration-300">
-                <i class="lni lni-whatsapp"></i>
-              </a>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=x.code165@gmail.com" target="_blank" class="text-red-500 hover:text-red-600 text-3xl transition-colors duration-300">
-                <i class="lni lni-google"></i>
-              </a>
-              <a href="https://www.facebook.com/share/169bwdoHkh/" target="_blank" class="text-blue-500 hover:text-blue-600 text-3xl transition-colors duration-300">
-                <i class="lni lni-facebook-fill"></i>
-              </a>
-              <a href="https://www.instagram.com/x.code123?igsh=cTI0b2RnMWNtdjM0" target="_blank" class="text-pink-500 hover:text-pink-600 text-3xl transition-colors duration-300">
-                <i class="lni lni-instagram-original"></i>
-              </a>
-            </div>
+                            <h4 class="text-[1.25rem] text-primary mb-3" data-translate="contact-info">معلومات الإتصال</h4>
+                      <div class="social-links flex items-center justify-center gap-6" style="direction: ltr;">
+            <a href="https://wa.me/201093943185" target="_blank" class="text-green-500 hover:text-green-600 text-3xl transition-colors duration-300">
+              <i class="lni lni-whatsapp"></i>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=x.code165@gmail.com" target="_blank" class="text-red-500 hover:text-red-600 text-3xl transition-colors duration-300">
+              <i class="lni lni-google"></i>
+            </a>
+            <a href="https://www.facebook.com/share/169bwdoHkh/" target="_blank" class="text-blue-500 hover:text-blue-600 text-3xl transition-colors duration-300">
+              <i class="lni lni-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/x.code123?igsh=cTI0b2RnMWNtdjM0" target="_blank" class="text-pink-500 hover:text-pink-600 text-3xl transition-colors duration-300">
+              <i class="lni lni-instagram-original"></i>
+            </a>
+          </div>
           </div>
         </div>
       </div>
@@ -2082,9 +2180,9 @@
             ></i>
           </div>
           <div>
-            <h4 class="text-[1.25rem] text-primary mb-3">العنوان</h4>
-            <p class="m-0">بني سويف، تزمنت الشرقية</p>
-            <p class="m-0">مصر</p>
+                            <h4 class="text-[1.25rem] text-primary mb-3" data-translate="contact-address">العنوان</h4>
+            <p class="m-0" data-translate="contact-address-text">بني سويف، تزمنت الشرقية</p>
+            <p class="m-0" data-translate="contact-address-country">مصر</p>
           </div>
         </div>
       </div>
@@ -2100,10 +2198,10 @@
             ></i>
           </div>
           <div>
-            <h4 class="text-[1.25rem] text-primary mb-3">جدول العمل</h4>
-            <p class="m-0">مفتوح 24 ساعة / 7 أيام 
+            <h4 class="text-[1.25rem] text-primary mb-3" data-translate="work-schedule-title">جدول العمل</h4>
+            <p class="m-0" data-translate="work-schedule-open">مفتوح 24 ساعة / 7 أيام 
             </p>
-            <p class="m-0"> أوقات العمل: من الساعة 10:00 صباحًا حتي 5:30 مساءً</p>
+            <p class="m-0" data-translate="work-schedule-hours"> أوقات العمل: من الساعة 10:00 صباحًا حتي 5:30 مساءً</p>
           </div>
         </div>
       </div>
@@ -2175,34 +2273,27 @@
           </div> -->
           <div class="col-6 lg:col-2">
             <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">الحلول</h4>
+              <h4 class="mb-9 text-lg font-semibold text-inherit" data-translate="footer-support">يدعم</h4>
               <ul>
                 <li>
                   <a
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >التسويق</a
+                    data-translate="footer-maintenance">الصيانة المستمرة</a
                   >
                 </li>
                 <li>
                   <a
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >التحليلات</a
+                    data-translate="footer-documentation">التوثيق</a
                   >
                 </li>
                 <li>
                   <a
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >تجارة</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >رؤى</a
+                    data-translate="footer-api-status">حالة واجهة برمجة التطبيقات</a
                   >
                 </li>
               </ul>
@@ -2210,27 +2301,34 @@
           </div>
           <div class="col-6 lg:col-2">
             <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">يدعم</h4>
+              <h4 class="mb-9 text-lg font-semibold text-inherit" data-translate="footer-solutions">الحلول</h4>
               <ul>
                 <li>
                   <a
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >الصيانة المستمرة</a
+                    data-translate="footer-marketing">التسويق</a
                   >
                 </li>
                 <li>
                   <a
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >التوثيق</a
+                    data-translate="footer-analytics">التحليلات</a
                   >
                 </li>
                 <li>
                   <a
                     href="javascript:void(0)"
                     class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >حالة واجهة برمجة التطبيقات</a
+                    data-translate="footer-commerce">تجارة</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
+                    data-translate="footer-insights">رؤى</a
                   >
                 </li>
               </ul>
@@ -2240,51 +2338,50 @@
       </div>
       <div class="w-full border-t border-solid border-alpha-dark"></div>
       <div class="container py-8">
-        <div class="flex flex-wrap">
-          <div class="w-full text-center mb-8">
-            <div class="my-1 flex flex-col items-center gap-4">
-              <p class="text-body-dark-11 text-lg max-w-2xl">
-                نحن نعمل علي إنشاء تجارب رقمية للعلامات التجارية و الشركات باستخدام التكنولوجيا.
-              </p>
-              
-              <div class="flex items-center justify-center gap-6">
-                <a
-                  href="https://www.facebook.com/share/169bwdoHkh/"
-                  target="_blank"
-                  class="text-body-dark-11 hover:text-primary text-2xl transition-colors duration-300"
-                >
-                  <i class="lni lni-facebook-fill"></i>
-                </a>
-                <a
-                  href="https://wa.me/201093943185"
-                  target="_blank"
-                  class="text-body-dark-11 hover:text-primary text-2xl transition-colors duration-300"
-                >
-                  <i class="lni lni-whatsapp"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/x.code123?igsh=cTI0b2RnMWNtdjM0"
-                  target="_blank"
-                  class="text-body-dark-11 hover:text-primary text-2xl transition-colors duration-300"
-                >
-                  <i class="lni lni-instagram-original"></i>
-                </a>
-                <a
-                  href="javascript:void(0)"
-                  class="text-body-dark-11 hover:text-primary text-2xl transition-colors duration-300"
-                >
-                  <i class="lni lni-linkedin-original"></i>
-                </a>
-              </div>
-            </div>
+        <div class="flex flex-col items-center justify-center text-center">
+          <!-- النص الرئيسي -->
+          <div class="mb-6">
+            <p class="text-body-dark-11 text-lg max-w-2xl text-center" data-translate="footer-description">
+              نحن نعمل علي إنشاء تجارب رقمية للعلامات التجارية و الشركات باستخدام التكنولوجيا.
+            </p>
+          </div>
+          
+          <!-- الأيقونات -->
+          <div class="footer-social-links flex items-center justify-center gap-6 mb-6" style="direction: ltr;">
+            <a
+              href="https://www.facebook.com/share/169bwdoHkh/"
+              target="_blank"
+              class="text-body-dark-11 hover:text-primary text-2xl transition-colors duration-300"
+            >
+              <i class="lni lni-facebook-fill"></i>
+            </a>
+            <a
+              href="https://wa.me/201093943185"
+              target="_blank"
+              class="text-body-dark-11 hover:text-primary text-2xl transition-colors duration-300"
+            >
+              <i class="lni lni-whatsapp"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/x.code123?igsh=cTI0b2RnMWNtdjM0"
+              target="_blank"
+              class="text-body-dark-11 hover:text-primary text-2xl transition-colors duration-300"
+            >
+              <i class="lni lni-instagram-original"></i>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="text-body-dark-11 hover:text-primary text-2xl transition-colors duration-300"
+            >
+              <i class="lni lni-linkedin-original"></i>
+            </a>
           </div>
 
-          <div class="w-full text-center">
-            <div class="my-1 flex justify-center">
-              <p class="text-body-dark-11">
-                &#169;   <span class="text-primary-color font-semibold">X Code</span>    جميع الحقوق محفوظة لشركة 
-              </p>
-            </div>
+          <!-- حقوق النشر -->
+          <div class="text-center">
+            <p class="text-body-dark-11" data-translate="footer-copyright">
+              جميع الحقوق محفوظة لشركة <span class="text-primary-color font-semibold">X Code</span> ©
+            </p>
           </div>
         </div>
       </div>
@@ -2317,21 +2414,7 @@
         cleanup: true,
       });
 
-      // GLightBox
-      GLightbox({
-        selector: ".video-popup",
-        href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
-        type: "video",
-        source: "youtube",
-        width: 900,
-        autoplayVideos: true,
-      });
-
-      const myGallery3 = GLightbox({
-        selector: ".portfolio-box",
-        type: "image",
-        width: 900,
-      });
+      // GLightBox disabled for portfolio videos
 
       // Testimonial
       const testimonialSwiper = new Swiper(".testimonial-carousel", {
