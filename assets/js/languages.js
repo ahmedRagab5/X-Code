@@ -47,12 +47,16 @@ const translations = {
     "portfolio-all": "جميع الاعمال",
     "portfolio-web": "تطوير المواقع",
     "portfolio-apps": "تطوير التطبيقات",
+    "portfolio-desktop": "تطبيقات الديسكتوب",
+    "portfolio-graphic": "الجرافيك ديزاين",
     "portfolio-graphic-title": "تصميم الجرافيك",
     "portfolio-graphic-desc": "نصمم هويتك البصرية بشكل يعبر عنك، من الشعارات و البروفايلات إلي التصاميم الدعائية، بأسلوب إبداعي يجذب الانتباه ويترك أثر.",
     "portfolio-web-title": "تطوير الويب",
     "portfolio-web-desc": "بنبني مواقع سريعة، احترافية و متجاوبة علي كل الأجهزة، سواء مواقع تعريفية أو متاجر إلكترونيةأو أنظمة مخصصة لإدارة أعمالك.",
     "portfolio-app-title": "تطوير التطبيقات",
     "portfolio-app-desc": "نطور تطبيقات موبايل ذكية وسهلة الإستخدام، سواء لأندرويد أو ios،تناسب احتياجات مشروعك وتقدم تجربة مستخدم مثالية.",
+    "portfolio-desktop-title": "تطبيقات الديسكتوب",
+    "portfolio-desktop-desc": "نطور تطبيقات ديسكتوب احترافية ومتقدمة لأنظمة Windows و macOS، مع واجهات حديثة وسهلة الاستخدام وحلول مخصصة لإدارة الأعمال والشركات.",
     
     // Team Section
     "team-title": "فريق العمل",
@@ -170,12 +174,16 @@ const translations = {
     "portfolio-all": "All Work",
     "portfolio-web": "Web Development",
     "portfolio-apps": "App Development",
+    "portfolio-desktop": "Desktop Applications",
+    "portfolio-graphic": "Graphic Design",
     "portfolio-graphic-title": "Graphic Design",
     "portfolio-graphic-desc": "We design your visual identity in a way that expresses you, from logos and profiles to promotional designs, with a creative style that attracts attention and leaves an impact.",
     "portfolio-web-title": "Web Development",
     "portfolio-web-desc": "We build fast, professional and responsive websites on all devices, whether corporate websites, e-commerce stores, or custom systems for managing your business.",
     "portfolio-app-title": "App Development",
     "portfolio-app-desc": "We develop smart and easy-to-use mobile applications, whether for Android or iOS, that suit your project's needs and provide an optimal user experience.",
+    "portfolio-desktop-title": "Desktop Applications",
+    "portfolio-desktop-desc": "We develop professional and advanced desktop applications for Windows and macOS systems, with modern and easy-to-use interfaces and custom solutions for business and company management.",
     
     // Team Section
     "team-title": "Our Team",
