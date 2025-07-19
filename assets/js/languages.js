@@ -15,7 +15,13 @@ const translations = {
     // About Section
     "about-title": "نبذة عن الشركة",
     "about-heading": "نقدم لك حلول تقنية متكاملة تساعد اي من اصحاب الشركات او المشاريع",
-    "about-text": "نحن شركة متخصصة في تطوير البرمجيات وتصميم المواقع الإلكترونية. نقدم حلول تقنية متكاملة تساعد أصحاب الشركات والمشاريع على تحقيق أهدافهم الرقمية.",
+    "about-subtitle": "نحن شركة متخصصة في تطوير البرمجيات وتصميم المواقع الإلكترونية. نقدم حلول تقنية متكاملة تساعد أصحاب الشركات والمشاريع على تحقيق أهدافهم الرقمية.",
+    "about-mission-title": "مهمتنا",
+    "about-mission": "نسعى لتقديم حلول تقنية مبتكرة ومتطورة تساعد الشركات والمشاريع على النمو والتطور في العالم الرقمي.",
+    "about-vision-title": "رؤيتنا",
+    "about-vision": "أن نكون الشريك التقني الموثوق به للشركات والمشاريع الناجحة في المنطقة.",
+    "about-values-title": "قيمنا",
+    "about-values": "الابتكار، الجودة، الموثوقية، والالتزام بتقديم أفضل الحلول لعملائنا.",
     
     // Services Section
     "services-title": "الخدمات",
@@ -142,7 +148,13 @@ const translations = {
     // About Section
     "about-title": "About Company",
     "about-heading": "We provide integrated technical solutions that help business owners and projects",
-    "about-text": "We are a company specialized in software development and website design. We provide integrated technical solutions that help business owners and projects achieve their digital goals.",
+    "about-subtitle": "We are a company specialized in software development and website design. We provide integrated technical solutions that help business owners and projects achieve their digital goals.",
+    "about-mission-title": "Our Mission",
+    "about-mission": "We strive to provide innovative and advanced technical solutions that help companies and projects grow and develop in the digital world.",
+    "about-vision-title": "Our Vision",
+    "about-vision": "To be the trusted technical partner for successful companies and projects in the region.",
+    "about-values-title": "Our Values",
+    "about-values": "Innovation, Quality, Reliability, and Commitment to providing the best solutions for our clients.",
     
     // Services Section
     "services-title": "Services",
