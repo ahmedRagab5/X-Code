@@ -56,25 +56,48 @@
   flex-direction: row;
 }
 
+/* إصلاح مشكلة القائمة المنسدلة */
+/* القائمة تظهر على اليسار دائماً لتجنب التداخل مع زر تغيير اللغة */
+.ic-navbar-collapse {
+  left: 1rem !important;
+  right: auto !important;
+}
+
+.ic-navbar-toggler {
+  left: 1rem !important;
+  right: auto !important;
+}
+
 /* تحسينات للزر */
 #languageToggle {
   transition: all 0.3s ease;
   font-weight: bold;
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 20px !important;
 }
 
 #languageToggle:hover {
   transform: scale(1.1);
 }
 
+/* ضمان أن زر تغيير اللغة يكون بنفس حجم زر تغيير المود */
+#languageToggle,
+[data-web-trigger="web-theme"] {
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 20px !important;
+}
+
 /* تحسينات للتنقل */
 [dir="rtl"] .ic-navbar-toggler {
-  left: auto;
-  right: 1rem;
+  left: 1rem !important;
+  right: auto !important;
 }
 
 [dir="ltr"] .ic-navbar-toggler {
-  right: auto;
-  left: 1rem;
+  left: 1rem !important;
+  right: auto !important;
 }
 
 /* تحسينات للقوائم */
@@ -223,43 +246,41 @@
   text-align: left;
 }
 
-/* العناوين الرئيسية في Hero تبقى في المنتصف دائماً */
+/* العناوين الرئيسية تبقى في المنتصف */
 [data-translate="hero-title"],
 [data-translate="hero-subtitle"] {
   text-align: center !important;
 }
 
-/* قسم Hero بالكامل يبقى في المنتصف */
+/* تحسينات للقسم الرئيسي */
 #home .scroll-revealed {
   text-align: center !important;
 }
 
 #home h1,
+#home h2,
 #home p {
   text-align: center !important;
 }
 
-/* ضمان أن العناوين الرئيسية تبقى في المنتصف */
+/* تحسينات للعنوان الرئيسي */
 .hero-section h1,
-.hero-section p,
-#home h1,
-#home p {
+.hero-section h2,
+.hero-section p {
   text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
 }
 
-/* تحسينات إضافية للعناوين الرئيسية */
+/* تحسينات خاصة للعنوان الرئيسي */
 [data-translate="hero-title"] {
   text-align: center !important;
-  display: block !important;
-  width: 100% !important;
+  font-size: 3rem !important;
+  font-weight: bold !important;
 }
 
 [data-translate="hero-subtitle"] {
   text-align: center !important;
-  display: block !important;
-  width: 100% !important;
+  font-size: 1.5rem !important;
+  margin-top: 1rem !important;
 }
 
 /* تحسينات للفقرات */
@@ -282,11 +303,13 @@
 
 /* تحسينات للقوائم */
 [dir="rtl"] ul, [dir="rtl"] ol {
+  text-align: right;
   padding-right: 1.5rem;
   padding-left: 0;
 }
 
 [dir="ltr"] ul, [dir="ltr"] ol {
+  text-align: left;
   padding-left: 1.5rem;
   padding-right: 0;
 }
@@ -302,13 +325,15 @@
 
 /* تحسينات للصور */
 [dir="rtl"] img {
-  margin-left: auto;
-  margin-right: 0;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 [dir="ltr"] img {
-  margin-right: auto;
-  margin-left: 0;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 /* تحسينات للبطاقات */
@@ -329,7 +354,7 @@
   direction: ltr;
 }
 
-/* تحسينات للنماذج */
+/* تحسينات لحقول الإدخال */
 [dir="rtl"] input, [dir="rtl"] textarea, [dir="rtl"] select {
   text-align: right;
 }
@@ -349,29 +374,31 @@
 
 /* تحسينات للشريط الجانبي */
 [dir="rtl"] .sidebar {
-  right: 0;
-  left: auto;
+  text-align: right;
+  border-right: none;
+  border-left: 1px solid #e5e7eb;
 }
 
 [dir="ltr"] .sidebar {
-  left: 0;
-  right: auto;
+  text-align: left;
+  border-left: none;
+  border-right: 1px solid #e5e7eb;
 }
 
 /* تحسينات للقوائم المنسدلة */
 [dir="rtl"] .dropdown-menu {
+  text-align: right;
   right: 0;
   left: auto;
-  text-align: right;
 }
 
 [dir="ltr"] .dropdown-menu {
+  text-align: left;
   left: 0;
   right: auto;
-  text-align: left;
 }
 
-/* تحسينات للتنقل في الصفحة */
+/* تحسينات للترقيم */
 [dir="rtl"] .pagination {
   flex-direction: row-reverse;
 }
@@ -380,7 +407,7 @@
   flex-direction: row;
 }
 
-/* تحسينات للشريط العلوي */
+/* تحسينات لشريط التنقل */
 [dir="rtl"] .navbar-nav {
   flex-direction: row-reverse;
 }
@@ -389,7 +416,7 @@
   flex-direction: row;
 }
 
-/* تحسينات للشعار */
+/* تحسينات للعلامة التجارية */
 [dir="rtl"] .navbar-brand {
   margin-right: 0;
   margin-left: 1rem;
@@ -400,7 +427,7 @@
   margin-right: 1rem;
 }
 
-/* تحسينات للبحث */
+/* تحسينات لصندوق البحث */
 [dir="rtl"] .search-box {
   text-align: right;
 }
@@ -418,7 +445,7 @@
   text-align: left;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات لسهم القائمة المنسدلة */
 [dir="rtl"] .dropdown-toggle::after {
   margin-right: 0.255em;
   margin-left: 0;
@@ -429,7 +456,7 @@
   margin-right: 0;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات لعناصر القائمة المنسدلة */
 [dir="rtl"] .dropdown-item {
   text-align: right;
 }
@@ -438,7 +465,7 @@
   text-align: left;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات لفاصل القائمة المنسدلة */
 [dir="rtl"] .dropdown-divider {
   margin-right: 0;
   margin-left: 0;
@@ -449,7 +476,7 @@
   margin-right: 0;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات لرأس القائمة المنسدلة */
 [dir="rtl"] .dropdown-header {
   text-align: right;
 }
@@ -458,7 +485,7 @@
   text-align: left;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات لنص القائمة المنسدلة */
 [dir="rtl"] .dropdown-text {
   text-align: right;
 }
@@ -467,64 +494,56 @@
   text-align: left;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات لحجم القائمة المنسدلة الصغير */
 [dir="rtl"] .dropdown-menu-sm {
-  right: 0;
-  left: auto;
+  min-width: 8rem;
 }
 
 [dir="ltr"] .dropdown-menu-sm {
-  left: 0;
-  right: auto;
+  min-width: 8rem;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات لحجم القائمة المنسدلة الكبير */
 [dir="rtl"] .dropdown-menu-lg {
-  right: 0;
-  left: auto;
+  min-width: 16rem;
 }
 
 [dir="ltr"] .dropdown-menu-lg {
-  left: 0;
-  right: auto;
+  min-width: 16rem;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات لحجم القائمة المنسدلة الكبير جداً */
 [dir="rtl"] .dropdown-menu-xl {
-  right: 0;
-  left: auto;
+  min-width: 20rem;
 }
 
 [dir="ltr"] .dropdown-menu-xl {
-  left: 0;
-  right: auto;
+  min-width: 20rem;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات لحجم القائمة المنسدلة الكبير جداً جداً */
 [dir="rtl"] .dropdown-menu-xxl {
-  right: 0;
-  left: auto;
+  min-width: 24rem;
 }
 
 [dir="ltr"] .dropdown-menu-xxl {
-  left: 0;
-  right: auto;
+  min-width: 24rem;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة المتمركزة */
 [dir="rtl"] .dropdown-menu-centered {
-  right: 50%;
-  left: auto;
-  transform: translateX(50%);
-}
-
-[dir="ltr"] .dropdown-menu-centered {
-  left: 50%;
   right: auto;
+  left: 50%;
   transform: translateX(-50%);
 }
 
-/* تحسينات للقوائم المنسدلة */
+[dir="ltr"] .dropdown-menu-centered {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* تحسينات للقائمة المنسدلة اليمنى */
 [dir="rtl"] .dropdown-menu-right {
   right: 0;
   left: auto;
@@ -535,7 +554,7 @@
   right: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليسرى */
 [dir="rtl"] .dropdown-menu-left {
   left: 0;
   right: auto;
@@ -546,7 +565,7 @@
   left: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليمنى الصغيرة */
 [dir="rtl"] .dropdown-menu-sm-right {
   right: 0;
   left: auto;
@@ -557,7 +576,7 @@
   right: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليسرى الصغيرة */
 [dir="rtl"] .dropdown-menu-sm-left {
   left: 0;
   right: auto;
@@ -568,7 +587,7 @@
   left: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليمنى المتوسطة */
 [dir="rtl"] .dropdown-menu-md-right {
   right: 0;
   left: auto;
@@ -579,7 +598,7 @@
   right: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليسرى المتوسطة */
 [dir="rtl"] .dropdown-menu-md-left {
   left: 0;
   right: auto;
@@ -590,7 +609,7 @@
   left: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليمنى الكبيرة */
 [dir="rtl"] .dropdown-menu-lg-right {
   right: 0;
   left: auto;
@@ -601,7 +620,7 @@
   right: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليسرى الكبيرة */
 [dir="rtl"] .dropdown-menu-lg-left {
   left: 0;
   right: auto;
@@ -612,7 +631,7 @@
   left: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليمنى الكبيرة جداً */
 [dir="rtl"] .dropdown-menu-xl-right {
   right: 0;
   left: auto;
@@ -623,7 +642,7 @@
   right: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليسرى الكبيرة جداً */
 [dir="rtl"] .dropdown-menu-xl-left {
   left: 0;
   right: auto;
@@ -634,7 +653,7 @@
   left: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليمنى الكبيرة جداً جداً */
 [dir="rtl"] .dropdown-menu-xxl-right {
   right: 0;
   left: auto;
@@ -645,7 +664,7 @@
   right: auto;
 }
 
-/* تحسينات للقوائم المنسدلة */
+/* تحسينات للقائمة المنسدلة اليسرى الكبيرة جداً جداً */
 [dir="rtl"] .dropdown-menu-xxl-left {
   left: 0;
   right: auto;
@@ -654,29 +673,26 @@
 [dir="ltr"] .dropdown-menu-xxl-left {
   right: 0;
   left: auto;
-} 
+}
 
-/* عناوين FAQ والنصوص المهمة في المنتصف */
+/* تحسينات خاصة للأسئلة الشائعة */
 [data-translate^="faq-title"],
 [data-translate^="faq-heading"],
-[data-translate^="faq-subtitle"],
-[data-translate^="faq-q"],
-[data-translate^="faq-a"] {
+[data-translate^="faq-subtitle"] {
   text-align: center !important;
 }
 
-/* عناوين التواصل والنصوص المهمة في المنتصف */
+/* تحسينات خاصة للاتصال */
 [data-translate^="contact-title"],
 [data-translate^="contact-heading"],
 [data-translate^="contact-subtitle"] {
   text-align: center !important;
 }
 
-/* عناوين قسم الخدمات والنصوص المهمة في المنتصف */
+/* تحسينات خاصة للخدمات */
 [data-translate^="services-title"],
 [data-translate^="services-heading"],
-[data-translate^="services-subtitle"],
-[data-translate^="service-"] {
+[data-translate^="services-subtitle"] {
   text-align: center !important;
 }
 
@@ -684,32 +700,31 @@
   text-align: center !important;
 }
 
-/* تمركز قسم الخدمات بالكامل */
+/* تحسينات خاصة لقسم الخدمات */
 #services {
-  text-align: center !important;
+  text-align: center;
 }
 
 #services .container {
-  text-align: center !important;
+  text-align: center;
 }
 
 #services .row {
-  justify-content: center !important;
-  text-align: center !important;
+  text-align: center;
 }
 
 #services .col-12,
-#services .sm\:col-6,
-#services .lg\:col-4 {
-  text-align: center !important;
+#services .col-6,
+#services .col-4 {
+  text-align: center;
 }
 
 #services .group {
-  text-align: center !important;
+  text-align: center;
 }
 
 #services .w-full {
-  text-align: center !important;
+  text-align: center;
 }
 
 #services h4,
@@ -717,249 +732,258 @@
   text-align: center !important;
 }
 
-/* الفوتر بالكامل في المنتصف */
+/* تحسينات خاصة للـ Footer */
 footer, .footer-social-links, [data-translate="footer-description"], [data-translate="footer-copyright"] {
   text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: flex !important;
-  flex-direction: column !important;
 }
 
 .footer-social-links {
-  gap: 1rem;
-  margin-bottom: 1rem;
+  text-align: center !important;
+  justify-content: center !important;
 }
 
-/* إصلاح الفوتر ليكون زي الصورة */
+/* تحسينات خاصة للـ Footer */
 footer .container {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
   text-align: center !important;
 }
 
 footer .flex {
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
   text-align: center !important;
+  justify-content: center !important;
 }
 
 footer p {
   text-align: center !important;
-  margin: 0 auto !important;
 }
 
 footer .footer-social-links {
-  display: flex !important;
+  text-align: center !important;
   justify-content: center !important;
-  align-items: center !important;
-  margin: 1rem auto !important;
-  gap: 1.5rem !important;
 }
 
+/* تحسينات خاصة للـ Footer */
 footer .text-center {
   text-align: center !important;
-  width: 100% !important;
 }
 
-/* إصلاح أقوى للفوتر */
+/* تحسينات خاصة للـ Footer */
 footer .py-8 .container {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
   text-align: center !important;
-  width: 100% !important;
 }
 
 footer .py-8 .flex {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
   text-align: center !important;
-  width: 100% !important;
+  justify-content: center !important;
 }
 
 footer .py-8 .mb-6 {
   text-align: center !important;
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
 }
 
 footer .py-8 .text-center {
   text-align: center !important;
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
 }
 
-/* إصلاح النص والأيقونات وحقوق النشر */
+/* تحسينات خاصة لوصف الـ Footer */
 footer [data-translate="footer-description"] {
   text-align: center !important;
-  display: block !important;
-  margin: 0 auto 1.5rem auto !important;
 }
 
 footer .footer-social-links {
   text-align: center !important;
-  display: flex !important;
-  flex-direction: row !important;
   justify-content: center !important;
-  align-items: center !important;
-  margin: 0 auto 1.5rem auto !important;
-  gap: 1.5rem !important;
-  flex-wrap: nowrap !important;
-  flex-flow: row nowrap !important;
 }
 
-/* إصلاح علامة الكويرايت لتكون في المنتصف */
+/* تحسينات خاصة لحقوق النشر */
 [data-translate="footer-copyright"] {
   text-align: center !important;
-  display: block !important;
-  margin: 0 auto !important;
-  width: 100% !important;
-  direction: ltr !important;
 }
 
-/* إصلاح علامة حقوق النشر حسب اللغة - لكن تبقى في المنتصف */
+/* تحسينات خاصة لحقوق النشر بالعربية */
 [lang="ar"] [data-translate="footer-copyright"] {
   text-align: center !important;
-  direction: rtl !important;
 }
 
+/* تحسينات خاصة لحقوق النشر بالإنجليزية */
 [lang="en"] [data-translate="footer-copyright"] {
   text-align: center !important;
-  direction: ltr !important;
 }
 
-/* إصلاح أقوى للأيقونات */
+/* تحسينات خاصة لأيقونات التواصل في الـ Footer */
 .footer-social-links {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
+  text-align: center !important;
   justify-content: center !important;
-  align-items: center !important;
-  gap: 1.5rem !important;
+  direction: ltr !important;
 }
 
 .footer-social-links a {
-  display: inline-block !important;
-  flex-shrink: 0 !important;
+  text-align: center !important;
 }
 
-/* إصلاح أقوى للأيقونات في الفوتر */
+/* تحسينات خاصة لأيقونات التواصل في الـ Footer */
 footer .footer-social-links {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
+  text-align: center !important;
   justify-content: center !important;
-  align-items: center !important;
-  gap: 1.5rem !important;
-  width: auto !important;
-  min-width: fit-content !important;
+  direction: ltr !important;
 }
 
 footer .footer-social-links a {
-  display: inline-block !important;
-  flex-shrink: 0 !important;
-  white-space: nowrap !important;
+  text-align: center !important;
 }
 
-/* إصلاح إضافي للأيقونات */
+/* تحسينات خاصة لأيقونات التواصل في الـ Footer */
 .footer-social-links.flex {
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
+  text-align: center !important;
 }
 
 .footer-social-links.flex.items-center {
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
+  text-align: center !important;
+  justify-content: center !important;
 }
 
-/* إصلاح استايل عناوين الفوتر */
+/* تحسينات خاصة لعناوين الـ Footer */
 [data-translate="footer-solutions"],
 [data-translate="footer-support"] {
   text-align: center !important;
-  font-weight: normal !important;
-  font-size: 1rem !important;
-  margin-bottom: 1rem !important;
-} 
+}
 
-/* إصلاح أقوى لعمودي الحلول ويدعم */
+/* تحسينات خاصة لصفوف الـ Footer */
 .row {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  margin: 0 -2rem !important;
-  clear: both !important;
-  justify-content: space-between !important;
+  text-align: center !important;
 }
 
 .row::after {
-  content: "" !important;
-  display: table !important;
-  clear: both !important;
+  text-align: center !important;
 }
 
+/* تحسينات خاصة لأعمدة الـ Footer */
 .col-6.lg\:col-2 {
-  display: block !important;
-  width: 45% !important;
-  float: left !important;
-  clear: none !important;
-  margin: 0 !important;
-  padding: 0 2rem !important;
-  box-sizing: border-box !important;
+  text-align: center !important;
 }
 
 .col-6.lg\:col-2:first-child {
-  text-align: right !important;
-  padding-right: 3rem !important;
+  text-align: center !important;
 }
 
 .col-6.lg\:col-2:last-child {
-  text-align: left !important;
-  padding-left: 3rem !important;
-  min-width: 250px !important;
+  text-align: center !important;
 }
 
-/* إصلاح النص داخل الأعمدة */
 .col-6.lg\:col-2 h4 {
-  font-size: 1.25rem !important;
-  font-weight: 600 !important;
-  margin-bottom: 1.5rem !important;
-  color: white !important;
-  text-align: inherit !important;
+  text-align: center !important;
 }
 
 .col-6.lg\:col-2 ul {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  text-align: inherit !important;
+  text-align: center !important;
 }
 
 .col-6.lg\:col-2 li {
-  margin-bottom: 0.75rem !important;
-  text-align: inherit !important;
+  text-align: center !important;
 }
 
 .col-6.lg\:col-2 a {
-  color: white !important;
-  text-decoration: none !important;
-  font-size: 1rem !important;
-  text-align: inherit !important;
-  display: block !important;
-  white-space: nowrap !important;
-  overflow: visible !important;
-  line-height: 1.4 !important;
+  text-align: center !important;
 }
 
 .col-6.lg\:col-2 a:hover {
-  color: #3d63dd !important;
+  text-align: center !important;
+}
+
+/* تحسينات للتجاوب مع التليفون */
+@media (max-width: 768px) {
+  /* إصلاح مشكلة القائمة المنسدلة على التليفون */
+  .ic-navbar-collapse {
+    left: 1rem !important;
+    right: auto !important;
+    max-width: 280px !important;
+  }
+  
+  .ic-navbar-toggler {
+    left: 1rem !important;
+    right: auto !important;
+  }
+  
+  /* تحسينات للنصوص على التليفون */
+  [data-translate="hero-title"] {
+    font-size: 2rem !important;
+  }
+  
+  [data-translate="hero-subtitle"] {
+    font-size: 1.2rem !important;
+  }
+  
+  /* تحسينات للقوائم على التليفون */
+  [dir="rtl"] .ic-navbar-collapse ul {
+    text-align: right;
+  }
+  
+  [dir="ltr"] .ic-navbar-collapse ul {
+    text-align: left;
+  }
+  
+  /* تحسينات للأزرار على التليفون */
+  #languageToggle {
+    font-size: 20px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  /* تحسينات للخدمات على التليفون */
+  .service-card {
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  /* تحسينات للفريق على التليفون */
+  .team-member {
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  /* تحسينات للأسئلة الشائعة على التليفون */
+  .faq-item {
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* تحسينات للاتصال على التليفون */
+  .contact-card {
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* تحسينات إضافية للتليفون الصغير */
+@media (max-width: 480px) {
+  [data-translate="hero-title"] {
+    font-size: 1.8rem !important;
+  }
+  
+  [data-translate="hero-subtitle"] {
+    font-size: 1rem !important;
+  }
+  
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* تحسينات للتنقل على التليفون الصغير */
+  .ic-navbar-toggler {
+    left: 0.5rem !important;
+    right: auto !important;
+  }
+  
+  .ic-navbar-collapse {
+    left: 0.5rem !important;
+    right: auto !important;
+    max-width: 250px !important;
+  }
+  
+  /* تحسينات للأزرار على التليفون الصغير */
+  #languageToggle {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 20px !important;
+  }
 } 
