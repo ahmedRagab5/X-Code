@@ -1,128 +1,409 @@
-# Inazuma - Tailwind CSS Company Landing Page
+# 🚀 X CODE - Company Landing Page
 
-![Preview image](./assets/img/preview.png)
+<div align="center">
 
-This is a responsive landing page template for a company built with Tailwind CSS. It comes with a refreshing design, fully customizable and all essential elements that needed to launch a complete website. This project is created to practice and improve my Tailwind CSS skill.
+![X CODE Logo](./assets/favicon/logo.jpg)
 
-## Description
+**موقع شركة X CODE - صفحة هبوط احترافية متعددة اللغات**
 
-Inazuma Tailwind CSS is an open-source and free Tailwind CSS template created by [Ranyeh](https://github.com/ranyeh24). Crafted for company website and can be used with almost all sort of web project. This template is Tailwind CSS version of [Inazuma](https://github.com/ranyeh24/inazuma) template with more refreshing design in it.
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-## Features
+[🌐 Live Demo](https://xcode-company.netlify.app) • [📖 Documentation](#documentation) • [🚀 Getting Started](#getting-started)
 
-* Responsive navbar with CTA and dark mode buttons
-* Hero section with CTA and intro video buttons
-* Contains animations when scrolling
-* Smooth scrolling in each section
-* Includes a dark & light theme mode
-* Responsive footer
-* SEO-Friendly
-* Compatible to all browsers
+</div>
 
-## Technologies Used
+---
 
-* HTML
-* CSS
-* JavaScript
-* [Tailwind CSS](https://tailwindcss.com/)
+## 📋 Table of Contents
 
-## Plugins Used
+- [✨ Features](#-features)
+- [🎨 Design](#-design)
+- [🛠️ Technologies](#️-technologies)
+- [🚀 Getting Started](#-getting-started)
+- [📁 Project Structure](#-project-structure)
+- [🎯 Sections](#-sections)
+- [🌍 Internationalization](#-internationalization)
+- [📱 Responsive Design](#-responsive-design)
+- [🎨 Customization](#-customization)
+- [📦 Dependencies](#-dependencies)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [👥 Team](#-team)
 
-* [ScrollReveal](https://scrollrevealjs.org/)
-* [GLightbox](https://biati-digital.github.io/glightbox/)
-* [Lineicons](https://lineicons.com/)
+---
 
-## Live Demo
+## ✨ Features
 
-You can see the live demo [here](https://ranyeh24.github.io/inazuma-tailwind).
+### 🌟 Core Features
+- **🌍 Multi-language Support**: Arabic & English with RTL/LTR support
+- **📱 Fully Responsive**: Optimized for all devices (Mobile, Tablet, Desktop)
+- **🌙 Dark/Light Mode**: Toggle between themes
+- **⚡ Fast Performance**: Optimized loading and smooth animations
+- **🎯 SEO Optimized**: Meta tags, structured data, and semantic HTML
 
-## Installation
+### 🎨 Design Features
+- **Modern UI/UX**: Clean, professional design
+- **Smooth Animations**: CSS transitions and hover effects
+- **Interactive Elements**: Engaging user interactions
+- **Professional Typography**: Optimized font hierarchy
+- **Color Consistency**: Cohesive color scheme throughout
 
-1. Clone the repository:
+### 🔧 Technical Features
+- **Tailwind CSS**: Utility-first CSS framework
+- **Vanilla JavaScript**: No heavy frameworks
+- **GLightbox**: Image and video popups
+- **Swiper.js**: Touch slider for testimonials
+- **Local Storage**: User preferences persistence
+
+---
+
+## 🎨 Design
+
+### Color Palette
+- **Primary**: `#3d63dd` (Blue)
+- **Secondary**: `#f3f4f6` (Light Gray)
+- **Accent**: `#10b981` (Green)
+- **Text**: `#1f2937` (Dark Gray)
+- **Background**: `#ffffff` (White)
+
+### Typography
+- **Primary Font**: Poppins (Google Fonts)
+- **Weights**: Light, Regular, Medium, SemiBold, Bold
+- **Responsive**: Scales appropriately across devices
+
+---
+
+## 🛠️ Technologies
+
+### Frontend
+- **HTML5**: Semantic markup
+- **CSS3**: Modern styling with Tailwind CSS
+- **JavaScript (ES6+)**: Interactive functionality
+- **Tailwind CSS**: Utility-first CSS framework
+
+### Libraries & Tools
+- **GLightbox**: Lightbox for images and videos
+- **Swiper.js**: Touch slider component
+- **Lineicons**: Icon library
+- **Vite**: Build tool and dev server
+
+### Development Tools
+- **VS Code**: Recommended editor
+- **Live Server**: Local development
+- **Git**: Version control
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn package manager
+- Modern web browser
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/xcode-landing-page.git
+   cd xcode-landing-page
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run tw-build
+   ```
+
+### Quick Start
+```bash
+# Clone and setup
+git clone https://github.com/your-username/xcode-landing-page.git
+cd xcode-landing-page
+npm install
+npm run dev
+
+# Open in browser
+open http://localhost:3000
 ```
-git clone https://github.com/yourusername/inazuma-tailwind.git
+
+---
+
+## 📁 Project Structure
+
 ```
-2. Or you can download and extract it to your project folder.
-3. Open `index.html` in your web browser.
+xcode-landing-page/
+├── 📁 assets/
+│   ├── 📁 css/
+│   │   ├── main.css          # Compiled Tailwind CSS
+│   │   └── languages.css     # RTL/LTR styles
+│   ├── 📁 js/
+│   │   ├── main.js           # Main JavaScript
+│   │   └── languages.js      # Language switching
+│   ├── 📁 img/               # Images and photos
+│   ├── 📁 font/              # Custom fonts
+│   └── 📁 favicon/           # Site icons
+├── 📁 src/
+│   └── 📁 css/
+│       └── tailwind.css      # Tailwind source
+├── 📄 index.html             # Main HTML file
+├── 📄 tailwind.config.js     # Tailwind configuration
+├── 📄 package.json           # Dependencies
+└── 📄 README.md              # This file
+```
 
-## Usage
+---
 
-This project is a static website. You can use it as a template or reference for building similar landing pages or to practice your Tailwind CSS skill.
+## 🎯 Sections
 
-## Customization
+### 1. **Hero Section**
+- Compelling headline and call-to-action
+- Background animations
+- Language toggle integration
 
-If you're new to Tailwind CSS, you have to learn it before doing customization. You can learn it [here](https://tailwindcss.com/docs/installation).
+### 2. **About Section**
+- Company overview
+- Mission and vision
+- Professional imagery
 
-### Change Colors
+### 3. **Services Section**
+- Service offerings with icons
+- Detailed descriptions
+- Interactive hover effects
 
-1. Open the `tailwind.config.js` file.
-2. Go to the `colors` key in the `extend` section under `theme` section.
+### 4. **Portfolio Section**
+- Project showcase
+- Filterable categories
+- Image lightbox integration
+
+### 5. **Team Section**
+- Team member profiles
+- Social media links
+- Professional photos
+
+### 6. **FAQ Section**
+- Common questions
+- Expandable answers
+- Search functionality
+
+### 7. **Contact Section**
+- Contact information
+- Contact form
+- Social media links
+
+### 8. **Footer**
+- Company information
+- Quick links
+- Social media icons
+
+---
+
+## 🌍 Internationalization
+
+### Supported Languages
+- **العربية (Arabic)**: RTL layout
+- **English**: LTR layout
+
+### Features
+- **Automatic Direction**: RTL/LTR based on language
+- **Text Translation**: Complete content translation
+- **Font Optimization**: Appropriate fonts for each language
+- **Layout Adaptation**: Proper alignment and spacing
+
+### Language Switching
 ```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  ...
-  theme: {
-    extend: {
-      ...
-      colors: {
-        // Colors customization here
-        // If you want to change key name, make sure you change the class name that used in the HTML file
-      },
-      ...
-    },
-  },
-  ...
-};
-```
-3. Change the color keys or values you want. To learn more, see the [color customization documentation](https://tailwindcss.com/docs/colors).
-4. Save the changes and run it in your web browser.
-
-### Change Font Family
-
-1. Open the `tailwind.config.js` file.
-2. Go to the `fontFamily` key in the `extend` section under `theme` section.
-```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  ...
-  theme: {
-    extend: {
-      ...
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],  //Sans-serif font
-      },
-      ...
-    },
-  },
-  ...
-};
-```
-3. Replace `Inter` font name with another font name you want. To learn more, see the [font family customization documentation](https://tailwindcss.com/docs/font-family).
-4. Open the `tailwind.css` file.
-5. Update the Google Fonts link and change `font-family` property with the font name you want.
-```css
-@import url(/* Your Google Fonts link here */);
-...
-@layer base {
-  ...
-  html {
-    ...
-    font-family: /* Your font name here */;
-  }
-  ...
+// Toggle between languages
+function toggleLanguage() {
+  const currentLang = document.documentElement.lang;
+  const newLang = currentLang === 'ar' ? 'en' : 'ar';
+  
+  document.documentElement.lang = newLang;
+  document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+  
+  applyTranslations(newLang);
 }
 ```
-6. Save the changes and run it in your web browser.
 
-## Bugs and Issues
+---
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/ranyeh24/inazuma/issues) here on GitHub or email me at <real.ranyeh24@gmail.com>.
+## 📱 Responsive Design
 
-## Credits
+### Breakpoints
+- **Mobile**: `< 640px`
+- **Tablet**: `640px - 1023px`
+- **Desktop**: `≥ 1024px`
 
-* Template design from [Play | Free Tailwind CSS Template for Startup and SaaS By TailGrids](https://play-tailwind.tailgrids.com/)
-* Images from [Unsplash](https://unsplash.com/)
+### Features
+- **Mobile-First**: Designed for mobile devices first
+- **Flexible Grid**: Responsive grid system
+- **Touch-Friendly**: Optimized for touch interactions
+- **Performance**: Optimized images and assets
 
-## License
+### Navigation
+- **Desktop**: Horizontal navigation
+- **Mobile**: Hamburger menu
+- **Language Toggle**: Accessible on all devices
 
-Inazuma is open-source and available under the [MIT License](https://raw.githubusercontent.com/ranyeh24/inazuma/main/LICENSE). You can use it with your personal or commercial projects without any attribution or backlink.
+---
+
+## 🎨 Customization
+
+### Colors
+Edit `tailwind.config.js` to customize colors:
+```javascript
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#3d63dd',
+        secondary: '#f3f4f6',
+        // Add your custom colors
+      }
+    }
+  }
+}
+```
+
+### Content
+- **Text**: Edit `assets/js/languages.js` for translations
+- **Images**: Replace images in `assets/img/`
+- **Icons**: Use Lineicons or custom SVG icons
+
+### Styling
+- **CSS**: Modify `assets/css/languages.css` for custom styles
+- **Tailwind**: Use utility classes or extend configuration
+
+---
+
+## 📦 Dependencies
+
+### Production Dependencies
+```json
+{
+  "glightbox": "^3.2.0",
+  "swiper": "^11.0.0"
+}
+```
+
+### Development Dependencies
+```json
+{
+  "tailwindcss": "^3.4.10",
+  "vite": "^6.3.4"
+}
+```
+
+### CDN Resources
+- **Lineicons**: Icon library
+- **Google Fonts**: Typography
+- **Swiper CSS**: Slider styles
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. **Fork the repository**
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. **Commit your changes**
+   ```bash
+   git commit -m 'Add amazing feature'
+   ```
+4. **Push to the branch**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+5. **Open a Pull Request**
+
+### Development Guidelines
+- Follow existing code style
+- Test on multiple devices
+- Ensure accessibility standards
+- Update documentation
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+```
+MIT License
+
+Copyright (c) 2024 X CODE
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+```
+
+---
+
+## 👥 Team
+
+### Development Team
+- **Abdelrahman Amer** - Mobile App Developer
+- **Mohamed Emad** - Web App Developer  
+- **Abdullah Mahmoud** - UI/UX Designer
+
+### Contact Information
+- **Email**: info@xcode.com
+- **Phone**: +20 114 763 1941
+- **Address**: Beni Suef, Tazmant Al-Sharqiya, Egypt
+
+### Social Media
+- **Facebook**: [X CODE](https://facebook.com/xcode)
+- **LinkedIn**: [X CODE](https://linkedin.com/company/xcode)
+- **WhatsApp**: [+20 114 763 1941](https://wa.me/201147631941)
+
+---
+
+## 🚀 Deployment
+
+### Netlify (Recommended)
+1. Connect your GitHub repository
+2. Set build command: `npm run tw-build`
+3. Set publish directory: `.`
+4. Deploy!
+
+### Vercel
+1. Import your repository
+2. Set framework preset to "Other"
+3. Deploy automatically
+
+### Manual Deployment
+1. Build the project: `npm run tw-build`
+2. Upload files to your web server
+3. Configure your domain
+
+---
+
+<div align="center">
+
+**Made with ❤️ by X CODE Team**
+
+[🌐 Visit Website](https://xcode-company.netlify.app) • [📧 Contact Us](mailto:info@xcode.com)
+
+</div>
