@@ -11,7 +11,181 @@
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
+.logo{
+  
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-left: 30px;
+  font-weight: 500;
+    text-shadow:
+    -1px 1px 0 #1c1a72,
+    -2px 2px 0 #1c1a72,
+    -3px 3px 0 #1c1a72,
+    -4px 4px 0 #1c1a72;
 
+    p{
+      margin: 0 ;
+    }
+
+}
+.code{
+  
+ position: relative;
+}
+/* .parent{
+ padding-left: 25px; 
+ width: fit-content;
+ font-size: large;
+ font-size: 40px;
+
+} */
+
+.p1{
+  padding-left: 10px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.x{
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translatey(-50%);
+  color: red;
+  font-size: 40px;
+  font-weight: 600;
+  transition: 0;
+  /* transform: translatex(-101%); */
+  .l,.r{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    background-color: red;
+    transform-origin: center; 
+    border-radius: 50%;
+    /* box-shadow:
+    -1px 1px 0 #1c1a72,
+    -2px 2px 0 #1c1a72,
+    -3px 3px 0 #1c1a72,
+    -4px 4px 0 #1c1a72; */
+
+  }
+  .r{
+      transform: translate(-50%,-50%) rotate(45deg);
+      height: 45px;
+      background-color: #3f3e3e;
+  }
+  .l{
+      transform: translate(-50%,-50%) rotate(-45deg);
+      height: 30px;
+      background-color: red;
+  }
+}
+
+.logo:hover{
+    transition: 0s;
+    cursor: pointer;
+    
+    p{
+      text-shadow:none;
+      
+    color: #11125a;
+    }
+  .code .x{
+    animation-name: rot;
+    animation-duration:2s ;
+    /* animation-fill-mode: both,both; */
+    animation-iteration-count:infinite ;
+    animation-direction:normal;
+    .r{
+      height: 30px;
+    }
+    .l,.r{
+      animation-name:move ;
+    animation-duration:2s ;
+    /* animation-fill-mod: both,both; */
+    animation-iteration-count:infinite ;
+    animation-direction:alternate;
+    }
+  }
+}
+@keyframes move{
+  to{
+    width: 8px;
+    height: 50px;
+  }
+}
+@keyframes rot{
+  to{
+    transform:translatey(-50%) rotate(360deg);
+  }
+}
+
+.group{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+@media (max-width:1023px) {
+  .m{
+    flex-direction: row !important;
+    direction: rtl !important;
+    #btn{
+      left: -15px !important;
+    }
+  }
+  #navbarMenu{
+    right: 10px !important;
+    width: max-content;
+    ul{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+  } 
+}
+.m{
+  direction: ltr !important;
+}
+/* **************** */
+#des,#gra{
+  /* display: none; */
+}
+/* **************** */
+
+.back{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: 101;
+  .icon{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    i{
+      color: white;
+    }
+    cursor: pointer;
+  }
+  iframe{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+/* **************** */
 *,
 ::before,
 ::after {

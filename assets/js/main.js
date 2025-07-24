@@ -1,5 +1,16 @@
 "use strict";
 
+
+// ******************
+
+
+// document.getElementById("click").onclick(()=>{
+//   document.getElementById("back").style.display="block";
+// })
+
+
+
+// ******************
 // Page loading
 var pageLoading = document.querySelector(".page-loading");
 
@@ -33,12 +44,57 @@ navbarToggler.addEventListener("click", function () {
     : '<i class="lni lni-menu"></i>';
 });
 
+// *************
+var isBack=false 
+var iframeId
+window.addEventListener("load", () => {
+  const x = document.querySelectorAll(".click5");
+  x.forEach((e) => {
+    e.onclick = () => {
+      iframeId=e.getAttribute('data')
+      console.log(`iframe${iframeId}`);
+      
+      document.getElementById(`iframe${iframeId}`).style.display='block'
+      document.getElementById("back").style.display="block";
+      document.body.style.overflow="hidden";
+      navbar.classList.remove("sticky");
+      isBack=true
+      // document.getElementById('iframe').src=link
+    };
+    // console.log(e)
+  });
+});
+
+// document.getElementById("click2").onclick = function(){
+//   console.log("here2")
+// }
+
+// document.getElementById("click").onclick = function(){
+//   // 
+//   document.getElementById("back").style.display="block";
+//   document.body.style.overflow="hidden";
+//   navbar.classList.remove("sticky");
+//   isBack=true
+//   console.log("here")
+// }
+document.getElementById("x").onclick = function(){
+  document.getElementById("back").style.display="none";
+  document.body.style.overflow="scroll";
+  navbar.classList.add("sticky");
+  const iframe=document.getElementById(`iframe${iframeId}`)
+  iframe.src = iframe.src;
+  document.getElementById(`iframe${iframeId}`).style.display='none'
+  isBack=false
+}
+// *************
 // Sticky navbar
 window.addEventListener("scroll", function () {
-  if (this.scrollY >= 72) {
+  if(!isBack){
+    if (this.scrollY >= 72) {
     navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
+  }
   }
 });
 
@@ -182,6 +238,37 @@ tabs.forEach((tab) => {
 });
 
 // Portfolio filter
+// ****************
+document.querySelector('[data-filter="all"]').onclick=()=>{
+    document.getElementById("des").style.display='none'
+    document.getElementById("gra").style.display='none'
+}
+// document.querySelectorAll('nav button').forEach((e)=>{
+//   e.onclick=()=>{
+//     document.getElementById("des").style.display='none'
+//     document.getElementById("gra").style.display='none'
+//   }
+// })
+// document.getElementById("desktop").onclick=()=>{
+//   document.getElementById("des").style.display='block'
+// }
+// document.getElementById("graphic").onclick=()=>{
+//   document.getElementById("gra").style.display='block'
+// }
+
+// document.getElementById('currentLang').onclick=()=>{
+//   if (localStorage.getItem('preferredLanguage')==='ar') {
+//     document.getElementById('x').style.direction='rtl'
+//     document.getElementById('ul').style.direction='rtl'
+//   }
+//   else if (localStorage.getItem('preferredLanguage')==='en') {
+//     document.getElementById('x').style.direction='ltr'
+//     document.getElementById('ul').style.direction='ltr'
+//   }
+  
+// }
+
+// ****************
 const portfolioFilters = document.querySelectorAll(".portfolio-menu button");
 
 portfolioFilters.forEach((filter) => {

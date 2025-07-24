@@ -55,14 +55,14 @@ const translations = {
     "portfolio-apps": "تطوير التطبيقات",
     "portfolio-desktop": "تطبيقات الديسكتوب",
     "portfolio-graphic": "الجرافيك ديزاين",
-    "portfolio-graphic-title": "تصميم الجرافيك",
-    "portfolio-graphic-desc": "نصمم هويتك البصرية بشكل يعبر عنك، من الشعارات و البروفايلات إلي التصاميم الدعائية، بأسلوب إبداعي يجذب الانتباه ويترك أثر.",
-    "portfolio-web-title": "تطوير الويب",
-    "portfolio-web-desc": "بنبني مواقع سريعة، احترافية و متجاوبة علي كل الأجهزة، سواء مواقع تعريفية أو متاجر إلكترونيةأو أنظمة مخصصة لإدارة أعمالك.",
-    "portfolio-app-title": "تطوير التطبيقات",
-    "portfolio-app-desc": "نطور تطبيقات موبايل ذكية وسهلة الإستخدام، سواء لأندرويد أو ios،تناسب احتياجات مشروعك وتقدم تجربة مستخدم مثالية.",
-    "portfolio-desktop-title": "تطبيقات الديسكتوب",
-    "portfolio-desktop-desc": "نطور تطبيقات ديسكتوب احترافية ومتقدمة لأنظمة Windows و macOS، مع واجهات حديثة وسهلة الاستخدام وحلول مخصصة لإدارة الأعمال والشركات.",
+    "portfolio-graphic-title": "متجر ملابس إلكتروني",
+    "portfolio-graphic-desc": "نظام متكامل لإدارة متجر خاص بتطبيق موبايل، يوفّر تجربة تسوّق مرنة وسهلة للمستخدم" ,
+    "portfolio-web-title": "متجر زهور وهدايا",
+    "portfolio-web-desc": "موقع إلكتروني متكامل لإدارة متجر زهور وهداييتيح للمستخدمين تصفح المنتجات، الشراء أونلاين، واختيار وسيلة الدفع المناسبة، مع لوحة تحكم قوية لصاحب المتجر لإدارة الطلبات والمخزون والمبيعات. تم تطويره بواجهة عصرية تدعم اللغتين العربية والإنجليزية، مع دعم كامل للتنبيهات والتقارير. ",
+    "portfolio-app-title": "متجر فواكه إلكتروني",
+    "portfolio-app-desc": "نظام متجر فواكه إلكتروني عبر تطبيق موبايل لتصفح المنتجات وتنفيذ الطلبات بسهولة.  يوفّر تسجيل دخول، سلة مشتريات، دفع إلكتروني، ومتابعة حالة الطلب.  مصمم لأنشطة بيع الأغذية والمنتجات الطازجة أونلاين  ",
+    "portfolio-desktop-title": "متجر الكتروني",
+    "portfolio-desktop-desc": "موقع إلكتروني متكامل لإدارة متجر لمنتجات مختلفه، يتيح للمستخدمين تصفح المنتجات، الشراء أونلاين، واختيار وسيلة الدفع المناسبة، مع لوحة تحكم قوية لصاحب المتجر لإدارة الطلبات والمخزون والمبيعات.            ",
     
     // Team Section
     "team-title": "فريق العمل",
@@ -74,6 +74,8 @@ const translations = {
     "team-member-2-role": "مطور تطبيقات الويب",
     "team-member-3-name": "عبدالله محمود",
     "team-member-3-role": "مصمم واجهات المستخدم",
+    "team-member-4-name": "احمد رجب",
+    "team-member-4-role": "مطور واجهات امامية",
     
     // FAQ Section
     "faq-title": "الأسئلة الشائعة",
@@ -188,15 +190,15 @@ const translations = {
     "portfolio-apps": "App Development",
     "portfolio-desktop": "Desktop Applications",
     "portfolio-graphic": "Graphic Design",
-    "portfolio-graphic-title": "Graphic Design",
-    "portfolio-graphic-desc": "We design your visual identity in a way that expresses you, from logos and profiles to promotional designs, with a creative style that attracts attention and leaves an impact.",
-    "portfolio-web-title": "Web Development",
-    "portfolio-web-desc": "We build fast, professional and responsive websites on all devices, whether corporate websites, e-commerce stores, or custom systems for managing your business.",
-    "portfolio-app-title": "App Development",
-    "portfolio-app-desc": "We develop smart and easy-to-use mobile applications, whether for Android or iOS, that suit your project's needs and provide an optimal user experience.",
-    "portfolio-desktop-title": "Desktop Applications",
-    "portfolio-desktop-desc": "We develop professional and advanced desktop applications for Windows and macOS systems, with modern and easy-to-use interfaces and custom solutions for business and company management.",
-    
+    "portfolio-graphic-title": "Online Clothing Store",
+    "portfolio-graphic-desc": "A complete system for managing a mobile app-based store, providing a smooth and easy shopping experience for users.",
+    "portfolio-web-title": "Flowers & Gifts Store",
+    "portfolio-web-desc": "A fully integrated e-commerce website for managing a flower and gift shop. It allows users to browse products, purchase online, and choose suitable payment methods, with a powerful admin dashboard for managing orders, inventory, and sales. Developed with a modern interface supporting both Arabic and English, with full support for notifications and reports.",
+    "portfolio-app-title": "Online Fruit Store",
+    "portfolio-app-desc": "An online fruit store system through a mobile app for easy product browsing and order placement. It offers login, shopping cart, online payment, and order tracking. Designed for businesses selling fresh foods and products online.",
+    "portfolio-desktop-title": "Online Store",
+    "portfolio-desktop-desc": "A fully integrated e-commerce website for managing a store with various products. It allows users to browse products, shop online, and choose suitable payment methods, with a powerful admin dashboard for managing orders, inventory, and sales.",
+
     // Team Section
     "team-title": "Our Team",
     "team-heading": "Our Creative Team",
@@ -207,6 +209,8 @@ const translations = {
     "team-member-2-role": "Web App Developer",
     "team-member-3-name": "Abdullah Mahmoud",
     "team-member-3-role": "UI/UX Designer",
+    "team-member-4-name": "Ahmed ragab ",
+    "team-member-4-role": "Front-End Developer",
     
     // FAQ Section
     "faq-title": "FAQ",

@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <!-- Meta Tags -->
-       
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Copyright" content="Inazuma" />
@@ -24,7 +23,7 @@
       name="twitter:description"
       content="Tailwind CSS Company Landing Page Template by Ranyeh."
     />
-    <meta name="twitter:image" content="./assets/img/inazuma-cover.png" />
+    <meta name="twitter:image" content="./assets/img/inazuma-cover.png"  />
     <meta
       content="Inazuma | Tailwind CSS Company Landing Page"
       property="og:title"
@@ -56,6 +55,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/icons/favicon-16x16.png">
     <link rel="manifest" href="./assets/favicon/icons/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <!-- CSS Plugins -->
     <link
@@ -101,17 +102,27 @@
       aria-label="Navigation bar"
     >
       <div class="container">
-        <div
+        <div 
           class="ic-navbar-container relative -mx-5 flex items-center justify-between"
         >
           <!-- زر تغيير المود - أقصى اليسار -->
           
-
-       
+          <div class="logo">
+            <div class="code">
+              <div class="x">
+                <div class="r"></div>
+                <div class="l"></div>
+              </div>
+              <p class="p1">Code</p>
+            </div>
+            
+            <p class="p2">COMPANY</p>
+          </div>
+        <div id="m" class="m" style="display: flex;flex-direction: row;">
           <!-- أزرار التنقل - المنتصف -->
-          <div class="flex w-full items-center justify-center px-5">
+          <div class="flex w-full items-center justify-center px-5" style="position: relative;">
             <div class="flex-1 flex justify-center">
-              <button
+              <button id="btn"
                 type="button"
                 class="ic-navbar-toggler absolute left-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-primary-color ring-primary focus:ring-2 lg:hidden"
                 data-web-toggle="navbar-collapse"
@@ -127,6 +138,7 @@
                 class="ic-navbar-collapse absolute left-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
               >
                 <ul
+                id="ul"
                   class="block lg:flex lg:justify-center"
                   role="menu"
                   aria-label="Navigation menu"
@@ -195,9 +207,7 @@
               aria-label="Toggle language"
             >
               <span id="currentLang">ع</span>
-            </button>
-          </div>
-          <!-- اللوجو - أقصى اليمين -->
+            </button>       
           </div>
         </div>
       </div>
@@ -496,6 +506,41 @@
       </section> -->
 
       <!-- Portfolio section -->
+       <div class="back" id="back">
+              <div class="icon" id="x">
+                <i class="fa-solid fa-x"></i>
+              </div>
+              <iframe id="iframe1"  src="https://drive.google.com/file/d/1-Bt5fMo0PsLOewhzAT98GLqZNR1UGzVm/preview"
+                      width="640" 
+                      height="480" 
+                      allow="autoplay"
+                      
+                      allowfullscreen
+                      >
+              </iframe>
+              <iframe id="iframe2"  src="https://drive.google.com/file/d/12o1JeFKVqOcXjY2tkIhwreOOYSWpzkHe/preview"
+                      width="640" 
+                      height="480" 
+                      allow="autoplay"
+                      allowfullscreen
+                      >
+              </iframe>
+              <iframe id="iframe3"  src="https://drive.google.com/file/d/12ggNBC_iYT4OSSCq9yHHGfCob_LiVjZj/preview"
+                      width="640" 
+                      height="480" 
+                      allow="autoplay"
+                      allowfullscreen
+                      >
+              </iframe>
+              <iframe id="iframe4"  src="https://drive.google.com/file/d/11sqWLQpV2plbiG8h13jo9Cg8m05qXlIb/preview"
+                      width="640" 
+                      height="480" 
+                      allow="autoplay"
+                      allowfullscreen
+                      >
+              </iframe>
+              
+            </div>
       <section id="portfolio" class="section-area">
         <div class="container">
           <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
@@ -534,14 +579,16 @@
               class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
               data-filter="mobile"
               data-translate="portfolio-apps"
+              
             >
              تطوير التطبيقات
             </button>
-            <button
+            <!-- <button
               type="button"
               class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
               data-filter="desktop"
               data-translate="portfolio-desktop"
+              id="desktop"
             >
              تطبيقات الديسكتوب
             </button>
@@ -550,19 +597,19 @@
               class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
               data-filter="graphic"
               data-translate="portfolio-graphic"
+              id="graphic"
             >
              الجرافيك ديزاين
-            </button>
+            </button> -->
           </nav>
-
           <div class="scroll-revealed portfolio-grid row">
             <div class="portfolio col-12 sm:col-6 lg:col-4">
-              <article class="group" data-filter="graphic">
+              <article class="group" data-filter="mobile" >
                 <div
                   class="relative overflow-hidden w-full aspect-[4/3] rounded-xl"
                 >
                   <img
-                    src="./assets/img/portfolio/portfolio-1.jpg"
+                    src="./assets/img/portfolio/m1.jpg"
                     alt="Graphics Design"
                     class="w-full h-full object-cover"
                   />
@@ -571,13 +618,10 @@
                   >
                     <div class="flex flex-wrap gap-2 p-4">
                       <div class="inline-block relative">
-                        <a
-                          href="https://drive.google.com/file/d/1-Bt5fMo0PsLOewhzAT98GLqZNR1UGzVm/view?usp=sharing"
-                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                          target="_blank"
-                        >
+                        <div id="click" data="1" style="cursor: pointer;" class="click5 text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color">
                           <i class="lni lni-play"></i>
-                        </a>
+                        </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -588,11 +632,12 @@
                       href="javascript:void(0)"
                       class="text-[1.5rem] leading-tight text-inherit"
                       data-translate="portfolio-graphic-title"
-                      >تصميم الجرافيك</a
+                      >متجر ملابس إلكتروني</a
                     >
                   </h4>
                   <p data-translate="portfolio-graphic-desc">
-                    نصمم هويتك البصرية بشكل يعبر عنك، من الشعارات و البروفايلات إلي التصاميم الدعائية، بأسلوب إبداعي يجذب الانتباه ويترك أثر.
+                    نظام متكامل لإدارة متجر خاص بتطبيق موبايل، يوفّر تجربة تسوّق مرنة وسهلة للمستخدم,مصمم ليخدم قطاع الملابس والتجزئة
+                    ، ويمكن تخصيصه لأي نشاط تجاري يعمل في البيع أونلاين.
                   </p>
                 </div>
               </article>
@@ -604,7 +649,7 @@
                   class="relative overflow-hidden w-full aspect-[4/3] rounded-xl"
                 >
                   <img
-                    src="./assets/img/portfolio/portfolio-2.jpg"
+                    src="./assets/img/portfolio/web1.jpg"
                     alt="Web Development"
                     class="w-full h-full object-cover"
                   />
@@ -613,13 +658,9 @@
                   >
                     <div class="flex flex-wrap gap-2 p-4">
                       <div class="inline-block relative">
-                        <a
-                          href="https://drive.google.com/file/d/1-Bt5fMo0PsLOewhzAT98GLqZNR1UGzVm/view?usp=sharing"
-                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                          target="_blank"
-                        >
+                        <div data="2"  style="cursor: pointer;" class="click5 text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color">
                           <i class="lni lni-play"></i>
-                        </a>
+                        </div>
                       </div>
                      
                     </div>
@@ -631,23 +672,23 @@
                       href="javascript:void(0)"
                       class="text-[1.5rem] leading-tight text-inherit"
                       data-translate="portfolio-web-title"
-                      >تطوير الويب</a
+                      >متجر زهور وهدايا</a
                     >
                   </h4>
-                  <p data-translate="portfolio-web-desc">
-                    بنبني مواقع سريعة، احترافية و متجاوبة علي كل الأجهزة، سواء مواقع تعريفية أو متاجر إلكترونيةأو أنظمة مخصصة لإدارة أعمالك.
-                  </p>
+                  <p data-translate="portfolio-web-desc">موقع إلكتروني متكامل لإدارة متجر زهور وهداي
+يتيح للمستخدمين تصفح المنتجات، الشراء أونلاين، واختيار وسيلة الدفع المناسبة،
+ مع لوحة تحكم قوية لصاحب المتجر لإدارة الطلبات والمخزون والمبيعات. تم تطويره بواجهة عصرية تدعم اللغتين العربية والإنجليزية، مع دعم كامل للتنبيهات والتقارير.                  </p>
                 </div>
               </article>
             </div>
-
+            
             <div class="portfolio col-12 sm:col-6 lg:col-4">
               <article class="group" data-filter="mobile">
                 <div
                   class="relative overflow-hidden w-full aspect-[4/3] rounded-xl"
                 >
                   <img
-                    src="./assets/img/portfolio/portfolio-3.jpg"
+                    src="./assets/img/portfolio/m2.jpg"
                     alt="App Development"
                     class="w-full h-full object-cover"
                   />
@@ -656,15 +697,10 @@
                   >
                     <div class="flex flex-wrap gap-2 p-4">
                       <div class="inline-block relative">
-                        <a
-                          href="https://drive.google.com/file/d/1-Bt5fMo0PsLOewhzAT98GLqZNR1UGzVm/view?usp=sharing"
-                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                          target="_blank"
-                        >
+                        <div data="3" style="cursor: pointer;" class="click5 text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color">
                           <i class="lni lni-play"></i>
-                        </a>
-                      </div>
-                     
+                        </div>
+                      </div>                    
                     </div>
                   </div>
                 </div>
@@ -674,23 +710,24 @@
                       href="javascript:void(0)"
                       class="text-[1.5rem] leading-tight text-inherit"
                       data-translate="portfolio-app-title"
-                      >تطوير التطبيقات</a
+                      >متجر فواكه إلكتروني</a
                     >
                   </h4>
                   <p data-translate="portfolio-app-desc">
-                  نطور تطبيقات موبايل ذكية وسهلة الإستخدام، سواء لأندرويد أو ios،تناسب احتياجات مشروعك وتقدم تجربة مستخدم مثالية.
-                  </p>
+نظام متجر فواكه إلكتروني عبر تطبيق موبايل لتصفح المنتجات وتنفيذ الطلبات بسهولة.  
+يوفّر تسجيل دخول، سلة مشتريات، دفع إلكتروني، ومتابعة حالة الطلب.  
+مصمم لأنشطة بيع الأغذية والمنتجات الطازجة أونلاين                  </p>
                 </div>
               </article>
             </div>
 
             <div class="portfolio col-12 sm:col-6 lg:col-4">
-              <article class="group" data-filter="desktop">
+              <article class="group" data-filter="web">
                 <div
                   class="relative overflow-hidden w-full aspect-[4/3] rounded-xl"
                 >
                   <img
-                    src="./assets/img/portfolio/portfolio-4.jpg"
+                    src="./assets/img/portfolio/web2.png"
                     alt="Desktop Application"
                     class="w-full h-full object-cover"
                   />
@@ -699,13 +736,9 @@
                   >
                     <div class="flex flex-wrap gap-2 p-4">
                       <div class="inline-block relative">
-                        <a
-                          href="https://drive.google.com/file/d/1-Bt5fMo0PsLOewhzAT98GLqZNR1UGzVm/view?usp=sharing"
-                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                          target="_blank"
-                        >
+                        <div data="4" style="cursor: pointer;" class="click5 text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color">
                           <i class="lni lni-play"></i>
-                        </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -716,15 +749,25 @@
                       href="javascript:void(0)"
                       class="text-[1.5rem] leading-tight text-inherit"
                       data-translate="portfolio-desktop-title"
-                      >تطبيقات الديسكتوب</a
-                    >
+                      >متجر الكتروني </a>
                   </h4>
                   <p data-translate="portfolio-desktop-desc">
-                    نطور تطبيقات ديسكتوب احترافية ومتقدمة لأنظمة Windows و macOS، مع واجهات حديثة وسهلة الاستخدام وحلول مخصصة لإدارة الأعمال والشركات.
-                  </p>
+موقع إلكتروني متكامل لإدارة متجر لمنتجات مختلفه، يتيح للمستخدمين تصفح المنتجات، الشراء أونلاين،
+ واختيار وسيلة الدفع المناسبة، مع لوحة تحكم قوية لصاحب المتجر لإدارة الطلبات والمخزون والمبيعات. </p>
                 </div>
               </article>
+              
             </div>
+            <!-- <div class="portfolio col-12 sm:col-6 lg:col-4" id="des">
+              <article class="group" data-filter="desktop">
+                <p>لا يوجد اعمال حتى الان</p>
+              </article>
+            </div>  
+            <div class="portfolio col-12 sm:col-6 lg:col-4" id="gra">
+              <article class="group" data-filter="graphic">
+                <p>لا يوجد اعمال حتى الان</p>
+              </article>
+            </div>   -->
           </div>
         </div>
       </section>
@@ -929,6 +972,62 @@
                     </a>
                     <a
                       href="https://www.linkedin.com/in/abdallah-mahmoud-901839375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      target="_blank"
+                      class="text-blue-600 hover:text-blue-700 transition-colors duration-300"
+                    >
+                      <i class="lni lni-linkedin-original"></i>
+                    </a>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="scroll-revealed col-12 sm:col-6 md:col-4 lg:col-3">
+              <figure
+                class="group rounded-xl bg-body-light-1 dark:bg-body-dark-12/10 px-5 pb-10 pt-12 shadow-card-2 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
+                  <img
+                    src="./assets/img/ahmed.jpg"
+                    alt="Team picture"
+                    class="h-full w-full rounded-full object-cover"
+                  />
+                  <span
+                    class="absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-red-500 opacity-0 group-hover:opacity-100"
+                  ></span>
+                  <span
+                    class="absolute top-0 right-0 -z-10 h-10 w-10 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100"
+                  ></span>
+                </div>
+                <figcaption class="text-center block">
+                  <h4
+                    class="mb-1 text-lg font-semibold text-body-light-12 dark:text-body-dark-12"
+                    data-translate="team-member-4-name"
+                  >
+                    احمد رجب
+                  </h4>
+                  <p
+                    class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
+                    data-translate="team-member-4-role"
+                  >
+                   مطور واجهات امامية
+                  </p>
+                  <div class="flex items-center justify-center gap-5">
+                    <a
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      class="text-blue-500 hover:text-blue-600 transition-colors duration-300"
+                    >
+                      <i class="lni lni-facebook-fill"></i>
+                    </a>
+                    <a
+                      href="https://wa.me/201140848838"
+                      target="_blank"
+                      class="text-green-500 hover:text-green-600 transition-colors duration-300"
+                    >
+                      <i class="lni lni-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/ahmed-ragab-494537257/"
                       target="_blank"
                       class="text-blue-600 hover:text-blue-700 transition-colors duration-300"
                     >
@@ -2240,12 +2339,12 @@
 
 
 <!-- Map section -->
-<section id="map" class="w-full h-[500px] overflow-hidden mt-16">
+<!-- <section id="map" class="w-full h-[500px] overflow-hidden mt-16">
   <object
     data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.659393578275!2d31.078989999999996!3d29.061728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1459cba8df9a9bbf%3A0xf47e6cc73b51703!2z2KfZhNiz2YUg2KfZhNix2YXYqNmK2Kkg2KfZhNi52YTZitmC!5e0!3m2!1sar!2seg!4v1723995134280!5m2!1sar!2seg"
     class="border-0 w-full h-full"
   ></object>
-</section>
+</section> -->
 
 
     </main>
